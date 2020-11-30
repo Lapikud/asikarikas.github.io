@@ -1,214 +1,110 @@
 <!DOCTYPE html>
+
 <html>
-	<head>
-		<title>ASI Karikas 2020</title>
-		<style type="text/css">
-			body{
-				line-height:1.6em;
-				min-height:1.6em;
-				font-family: calibri, Times New Roman, Verdana;
-			}
-			@media(max-width:600px){
-				body{
-					width:100%;
-					float: none;
-				}
-			}
-			#logo{
-				text-align: center;
-			}
-			#description{
-				text-align: center;
-				padding: 2% 5% 2% 5%;
-				margin: 2% 10% 2% 10%;
-				border: 2px solid black;
-			} 
-			#description h1{
-				text-transform: uppercase;
-				letter-spacing: 0.07em;
-			}
-			.signature{
-				text-align: center;	
-			}
-			* {
-  				box-sizing: border-box;
-				}
+    <head>
+        <title>ASI Karikas 2021</title>
 
-			.row {
-				display: flex;
-				margin: 2% 10%;
-				text-align: center;
-			}
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-			.column {
-				flex: 20.00%;
-				padding: 5px;
-			}
-			.container1 h1{
-				text-align: center;
-				padding: 0% 10%;
-				text-decoration: underline;
-			}
-			.container1 p{
-				border-left: 6px solid red;
-				margin-left: 10%;
-				color: blue;
-				padding: 0% 0.5%;
-				margin-right: 10%;
-			}
-			.task h1{
-				text-decoration: underline;
-				text-transform: uppercase;
-				padding: 2% 10% 0% 10%;
-			}
-			.task p{
-				margin: 0% 10%;
+        <!-- BOOTSTRAP CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        
+        <!-- CUSTOM CSS -->
+        <link rel="stylesheet" href="./asi.css">
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-bottom navbar-light">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_options" aria-controls="navbar_options" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+    
+                  <div class="collapse navbar-collapse" id="navbar_options">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item">
+                        <a class="nav-link" data-destination="#introduction">Tutvustus</a>
+                      </li>
 
-			}
-			.system img{
-				float: right;
-				width: 33.33%;
-				padding: 2px 6px 10px 5px;
-				margin-right: 10%;
-				width: 300px;
-			}
-			.list{
-				margin: 0% 10%;
-			}
-			.task{
-				margin: 2% 10% 2% 10%;
-				border: 5px solid coral;
-				border-radius: 20px;
-			}
-			.sticky {
-			  position: fixed;
-			  top: 0;
-			  width: 100%;
-			  background-color: white;
-			}
-		</style>
-	</head>
-	<body>
-		<header>
-			<div id="logo">
-				<img id="logo" src="logo.jpg" alt="ASI Karikas" width="400">
-			</div>
-		</header>
+                      <li class="nav-item">
+                        <a class="nav-link" data-destination="#participation">Osalemine</a>
+                      </li>
+    
+                      <li class="nav-item">
+                        <a class="nav-link" data-destination="#prev_participants">Osalenud koolid</a>
+                      </li>
+    
+                      <li class="nav-item">
+                        <a class="nav-link" data-destination="#sponsors">Sponsorid</a>
+                      </li>
+    
+                      <li class="nav-item">
+                        <a class="nav-link" data-destination="#archive">Arhiiv</a>
+                      </li>
+    
+                      <li class="nav-item">
+                        <a class="nav-link" data-destination="#contact">Kontakt</a>
+                      </li>
+    
+                    </ul>
+                  </div>
+            </div>
+        </nav>
 
-		<section id="description">
-			<h1>Hea kooliesindaja!</h1>
-			<p>Kutsume Teie kooli õpilasi osalema programmeerimisvõistlusel “ASI Karikas”, mida korraldavad ühiselt Tallinna Tehnikaülikooli Arvutisüsteemide instituut ja Tarkvaraarenduse klubi Lapikud.</p>
+        <main class="container">
+            <section id="introduction">
+                <p id="intro"><!-- JS fills this --></p>
+                <p id="organizers">Võistlust korraldavad <a target="_blank" href="https://www.taltech.ee/">TalTechi</a> Arvutisüsteemide Instituut ning tarkvaraarendusklubi <a target="_blank" href="https://www.lapikud.ee/">Lapikud</a>.</p>
+            </section>
 
-			<p>Konkurss on võistkondlik ning toimub kahes voorus. Osalema on oodatud kuni neljaliikmelised võistkonnad ning kasutada võib programmeerimiskeeli Python, Java, C, C++ või C#.</p>
-			
-			<p>Esimeses voorus osalemiseks tuleb lahendada lisatud ülesanded ning esitada need e-posti teel: asikarikas@asikarikas.ee. Lahenduste esitamise tähtaeg on 17.02.2020 kell 23.59. Kõik esimese vooru osalejad saavad osavõtja diplomi.</p>
-			
-			<p>Esimese vooru edukalt sooritanud võistkonnad koos juhendajaga kutsutakse lõppvooru, mis toimub Tallinna Tehnikaülikooli IT Kolledžis 14.03.2020 kell 10.00 - 14.00. Lõppvooru ülesandeks on rakendusprogrammi koostamine.</p>
-			
-			<p>Kõigile lõppvõistlusest osavõtjatele pakutakse võistluspäeva hommikul kell 9.00 hommikusööki ning pärast võistlust lõunasööki. Ajavahemikus 14.00 - 16.00 saavad võistlejad üliõpilaste juhendamisel proovida mikrokontrollerite programmeerimist. Võitjad kuulutatakse välja kell 16.00. Kõigil lõppvoorus osalejatel loetakse TTÜ IT teaduskonda sisseastumisel ained Programmeerimine I (IAX0583) ja Programmeerimine II (IAX0584) sooritatuks.</p>
+            <section id="participation">
+                <h1>Osalemine</h1>
+                
+                <h2>Miks osaleda?</h2>
+                <ol>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                </ol>
 
-			<p>ASI Karika toimkonna nimel,</p>
+                <h2>Eelvoor</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas mauris. Phasellus vehicula, arcu non finibus dignissim, odio arcu aliquet arcu, at porttitor nulla nulla in tortor. Fusce ut lacinia magna. Sed in ex lectus. Vivamus fringilla lacus in semper lobortis. Phasellus felis nibh, pharetra in lacus ac, imperdiet scelerisque tortor. Vestibulum egestas dictum augue, ut bibendum ex elementum nec. Nam eget posuere neque.</p>
 
-			<p>Risto Leesmäe, Tallinna Tehnikaülikooli Tarkvaraarenduse klubi Lapikud esimees</p>
-			<div class="signature">
-				<img src="sign1.jpg" alt="Signature of Risto Leesmäe" width="150">
-			</div>
-			<p>Vladimir Viies PhD, Tallinna Tehnikaülikool ASI lõputööde kaitsmiskomisjoni esimees</p>
-			<div class="signature">
-				<img src="sign2.jpg" alt="Signature of Vladimir Viies" width="150">
-			</div>
-		</section>
-		
-		<div class="row">
-			<div class="column">
-				<img src="c.jpg" alt="c" width="150">
-			</div>
-			<div class="column">
-			    <img src="python.jpg" alt="python" width="150">
-			</div>
-			<div class="column">
-				<img src="c_2plus.jpg" alt="c++" width="150">
-			</div>
-			<div class="column">
-				<img src="java.jpg" alt="java" width="150">
-			</div>
-			<div class="column">
-				<img src="csharp.jpg" alt="c#" width="150">
-			</div>
-		</div>
+                <h2>Lõppvoor</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas mauris. Phasellus vehicula, arcu non finibus dignissim, odio arcu aliquet arcu, at porttitor nulla nulla in tortor. Fusce ut lacinia magna. Sed in ex lectus. Vivamus fringilla lacus in semper lobortis. Phasellus felis nibh, pharetra in lacus ac, imperdiet scelerisque tortor. Vestibulum egestas dictum augue, ut bibendum ex elementum nec. Nam eget posuere neque. Fusce ullamcorper, risus ac sollicitudin maximus, dui massa faucibus felis, eget faucibus nisi dolor nec nulla. Aenean volutpat tortor orci, sit amet sodales nunc mattis eget.</p>
+            </section>
 
-		<div class="container1">
-			<h1>ASI KARIKA 2020 eelvooru ülesanded!</h1>
-			<p>NB! Mõlema ülesande lahendamine ei ole kohustuslik.
-			<br />  
-			Iga ülesande lahendus annab maksimaalselt 50 punkti. 
-			Kokku on võimalik saada kuni 100 punkti. Kaheksa parima punktisummaga võistkonda pääsevad lõppvooru. Kui maksimaalse tulemuse on saanud rohkem kui 8 võistkonda, siis finaali pääsenute arvu suurendatakse.
-			</p>
-		</div>
+            <section id="prev_participants">
+                <h1>Osalenud koolid</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas mauris. Phasellus vehicula, arcu non finibus dignissim, odio arcu aliquet arcu, at porttitor nulla nulla in tortor. Fusce ut lacinia magna. Sed in ex lectus. Vivamus fringilla lacus in semper lobortis. Phasellus felis nibh, pharetra in lacus ac, imperdiet scelerisque tortor. Vestibulum egestas dictum augue, ut bibendum ex elementum nec. Nam eget posuere neque. Fusce ullamcorper, risus ac sollicitudin maximus, dui massa faucibus felis, eget faucibus nisi dolor nec nulla. Aenean volutpat tortor orci, sit amet sodales nunc mattis eget.</p>
+            </section>
 
-		<section id="exercises">
-			<article class="task">
-				<h1>1. LAEVADE POMMITAMINE (mäng arvuti vastu) (50p)</h1>
-				<p>
-					Laevade pommitamine on klassikaline strateegiamäng kahe mängija vahel. Mõlemad mängijad paigutavad ruudustikku laevad ning eesmärk on hävitada vastase laevad läbi kordamööda “pommitamise”.
-					<br />
-					Antud ülesandes on eesmärk kirjutada programm, kus mängija saab võistelda arvuti vastu. Mängijal peab olema võimalik valida keerukuse tase koos laevade hulga ja suurustega. Mängureeglid võib kujundada ise, kuid allpool on välja toodud klassikalise mängu kirjeldus, millest on võimalik lähtuda.
-					<br />
-					Arvuti võiks olla iseõppiv, see tähendab, et iga mängija vastu kujundab see individuaalset strateegiat. Ise võib valida viisi, kuidas arvuti eristab erinevaid mängijaid.
-					<br />
-					Näiteid: 
-					<br />
-				</p>
-				<p style="font-style:italic">Kui mängija Jüri alustab mitu mängu järjest alati esimeste käikudena nurkade pommitamist, siis arvuti enam sinna laevu ei paiguta.
-				Kui Jüri alustab mängu alati mänguvälja keskkoha pommitamisega, siis arvuti paigutab sinna üheruudulise laeva, et meelitada sellega ümbruse tühja pommitamist, viivitades mängijat.</p>
-				<p>Klassikalisel laevade pommitamisel kehtivad järgnevad reeglid:</p>
-				<div class="list">
-					<ul type="circle">
-						<li>Mängulaud on 10x10 ruudustik.</li>
-						<li>Mõlemad mängijad paigutavad ruudustikku 5 laeva, mille sekka kuulub üks 5-ruudu pikkune laev, üks 4-ruudu pikkune laev, kaks 3-ruudu pikkust laeva ja üks 2-ruudu pikkune laev.</li>
-						<li>“Pommitamine” toimub kordamööda ning selle käigus valib mängija ühe ruudu vastase ruudustikul, mida hävitada.</li>
-						<li>Võitja on mängija, kes suudab esimesena hävitada kõik vastase ruudustikul olevad laevad.</li>
-					</ul>
-				</div>
-			</article>
-			<article class="task">
-				<h1>
-					2. Vana-Eesti  ruunikalender - teha kaasaegne ruunikalender koos muistsete tähtpäevadega(50p)
-				</h1>
-				<div class="system">
-					<img id="ruuni" src="ruunpic.jpg" alt="ruunikalender image">
-					<p>
-						Sirvikalendrit ehk ruunikalendrit on kasutanud erinevad rahvad Põhja-Euroopas. Eestis säilinud ruunikalendrite abil on võimalik hästi arvestada nädalapäevi ning päevad on loendatud nädalate järgi ühest tähtpäevast teiseni. Sirvikalendris vastab igale päevale kahe horisontaalse joone vahel olev vertikaalne kriips, kalendri- või ruunimärk.  
-						<br />
-						Antud ülesandes on eesmärk koostada programm, mis tõlgib tänapäevase kalendri ümber ruunikalendriks, mis sisaldaks ka tähtpäevi rahvakalendrist.
-						<br />
-						Võimalik võiks olla kahepoolne tõlkimine, see tähendab, et ruunikalenderi saab tagasi tõlkida ka tänapäevaseks kalendriks.  
-						<br />
-						<br />
-						Abimaterjale:
-						<br />
-						<a href="https://bit.ly/36oYbUg" target="_blank">https://bit.ly/36oYbUg</a>
-						<br />
-						<a href="http://www.tud.ttu.ee/im/Vladimir.Viies/materials/ruuniKalAbi/" target="_blank">http://www.tud.ttu.ee/im/Vladimir.Viies/materials/ruuniKalAbi/</a>	
-						<br />
-						<br />
-					</p>
-				</div>
-			</article>
-		</section>
-		<script>
-			window.onscroll = function() {myFunction()};
+            <section id="sponsors">
+                <h1>Sponsorid</h1>
+                <img src="./logod/taltech2.svg">
+                <img src="./logod/starship.svg">
+            </section>
 
-			var header = document.getElementById("logo");
-			var sticky = header.offsetTop;
+            <section id="archive">
+                <h1>Arhiiv</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas mauris. Phasellus vehicula, arcu non finibus dignissim, odio arcu aliquet arcu, at porttitor nulla nulla in tortor. Fusce ut lacinia magna. Sed in ex lectus. Vivamus fringilla lacus in semper lobortis. Phasellus felis nibh, pharetra in lacus ac, imperdiet scelerisque tortor. Vestibulum egestas dictum augue, ut bibendum ex elementum nec. Nam eget posuere neque. Fusce ullamcorper, risus ac sollicitudin maximus, dui massa faucibus felis, eget faucibus nisi dolor nec nulla. Aenean volutpat tortor orci, sit amet sodales nunc mattis eget.</p>
+            </section>
 
-			function myFunction() {
-			  if (window.pageYOffset > sticky) {
-			    header.classList.add("sticky");
-			  } else {
-			    header.classList.remove("sticky");
-			  }
-			}
-		</script>
-	</body>
+            <section id="contact">
+                <h1>Kontakt</h1>
+                <address><a href="mailto:asikarikas@asikarikas.ee">asikarikas@asikarikas.ee</a></address>
+            </section>
+        </main>
+
+        <!-- BOOTSTRAP JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        
+        <!-- CUSTOM JS -->
+        <script src="./asi.js"></script>
+    </body>
 </html>
