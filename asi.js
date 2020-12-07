@@ -1,4 +1,30 @@
+/* MAIN */
+$(document).ready(function() {
+    /* Intro text animation */
+    var intro_text = "ASI Karikas 2021 on võistkondlik programmeerimise võistlus kooliõpilastele.";
+    var intro_textbox = $("#intro");
+
+    fitTextboxToText(intro_textbox, intro_text, true, $("section:not(#introduction), #organizers"));
+    revealText(intro_textbox, intro_text, 54);
+
+    /* Smooth navigation scrolling */
+    $(".nav-link").click(navScroll);
+
+    /* Archive content selector */
+    // var archive_elements = {
+    //     selector: $("#archive_selector"),
+    //     content: $(".archive_content"),
+    //     year20: $("#archive_2020"),
+    //     year21: $("#archive_2021")
+    // }
+
+    // archive_elements.selector.change(function(){
+    //     showArchiveContent(archive_elements);
+    // });
+});
+
 /* FUNCTIONS */
+/* Intro text */
 var revealText = function(textbox, text, speed, letter_position = 0){
     setTimeout(function(){
         if(letter_position < text.length){
@@ -21,22 +47,26 @@ var fitTextboxToText = function(textbox, text, hidden_content = false, content){
     }
 }
 
-/* EXECUTION */
-$(document).ready(function() {
-    /* Intro text animation */
-    var intro_text = "ASI Karikas 2021 on võistkondlik programmeerimise võistlus kooliõpilastele.";
-    var intro_textbox = $("#intro");
+/* Navbar */
+var navScroll = function(){
+    var destination_element = $($(this).data("destination")); // Navbar link points to a ceratin page element, which ID is stored in a data label
 
-    fitTextboxToText(intro_textbox, intro_text, true, $("section:not(#introduction), #organizers"));
-    revealText(intro_textbox, intro_text, 54);
+    window.scrollTo({
+        top: destination_element.offset().top - 20,
+        behavior: "smooth"
+      });
+}
 
-    /* Smooth navigation scrolling */
-    $(".nav-link").click(function(){
-        var destination_element = $($(this).data("destination")); // Navbar link points to a ceratin page element, which ID is stored in a data label
+/* Archive */
+// var showArchiveContent = function(archive_elements){
+//     archive_elements.content.hide(); // Hide previosuly shown archive
 
-        window.scrollTo({
-            top: destination_element.offset().top - 20,
-            behavior: "smooth"
-          });
-    });
-});
+//     switch(archive_elements.selector.val()){ // Show the selected archive
+//         case "2020":
+//             archive_elements.year20.show();
+//             break;
+//         case "2021":
+//             archive_elements.year21.show();
+//             break;
+//     }
+// }

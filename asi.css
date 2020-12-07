@@ -29,10 +29,6 @@ a {
     color:#FFCC0A;
 }
 
-/* a:visited {
-    color:#17FFDF;
-} */
-
 a:hover, a:active {
     color:#3040FF;
 }
@@ -46,7 +42,11 @@ a:hover, a:active {
     color: rgb(0 0 0 / 85%);
 }
 
-/* PLACEMENT */
+.file__type {
+    color:#17FFDF;
+}
+
+/* WHITESPACE */
 main {
     padding-top: 30px;
     padding-bottom: 80px; /* To accomodate the navbar */
@@ -68,14 +68,21 @@ h2, h3, h4, h5 {
     margin-right: 16px;
 }
 
-/* IMAGES */
+/* PAGE SECTIONS */
+/* Navbar */
+.nav-link {
+    cursor: pointer;
+}
+
+/* Sponsors */
 #sponsors img {
     width: 300px;
 }
 
-/* BEHAVIOUR */
-.nav-link {
-    cursor: pointer;
+/* Archive */
+.archive_content {
+    list-style-type: none;
+    padding-left: 0;
 }
 
 /* RESPONSIVNESS */

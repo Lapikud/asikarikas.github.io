@@ -18,38 +18,38 @@
     <body>
         <nav class="navbar navbar-expand-lg fixed-bottom navbar-light">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_options" aria-controls="navbar_options" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-    
-                  <div class="collapse navbar-collapse" id="navbar_options">
-                    <ul class="navbar-nav mr-auto">
-                      <li class="nav-item">
-                        <a class="nav-link" data-destination="#introduction">Tutvustus</a>
-                      </li>
+              <!-- Navigation menu toggle for small devices -->
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_options" aria-controls="navbar_options" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
-                      <li class="nav-item">
-                        <a class="nav-link" data-destination="#participation">Osalemine</a>
-                      </li>
-    
-                      <li class="nav-item">
-                        <a class="nav-link" data-destination="#prev_participants">Osalenud koolid</a>
-                      </li>
-    
-                      <li class="nav-item">
-                        <a class="nav-link" data-destination="#sponsors">Sponsorid</a>
-                      </li>
-    
-                      <li class="nav-item">
-                        <a class="nav-link" data-destination="#archive">Arhiiv</a>
-                      </li>
-    
-                      <li class="nav-item">
-                        <a class="nav-link" data-destination="#contact">Kontakt</a>
-                      </li>
-    
-                    </ul>
-                  </div>
+              <!-- Navigation options -->
+              <div class="collapse navbar-collapse" id="navbar_options">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" data-destination="#introduction">Tutvustus</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" data-destination="#participation">Osalemine</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" data-destination="#prev_participants">Osalenud koolid</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" data-destination="#sponsors">Sponsorid</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" data-destination="#archive">Arhiiv</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" data-destination="#contact">Kontakt</a>
+                  </li>
+
+                </ul>
+              </div>
             </div>
         </nav>
 
@@ -91,7 +91,45 @@
 
             <section id="archive">
                 <h1>Arhiiv</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas mauris. Phasellus vehicula, arcu non finibus dignissim, odio arcu aliquet arcu, at porttitor nulla nulla in tortor. Fusce ut lacinia magna. Sed in ex lectus. Vivamus fringilla lacus in semper lobortis. Phasellus felis nibh, pharetra in lacus ac, imperdiet scelerisque tortor. Vestibulum egestas dictum augue, ut bibendum ex elementum nec. Nam eget posuere neque. Fusce ullamcorper, risus ac sollicitudin maximus, dui massa faucibus felis, eget faucibus nisi dolor nec nulla. Aenean volutpat tortor orci, sit amet sodales nunc mattis eget.</p>
+
+                <!-- Archive navigation -->
+                <!-- <label for="archive_selector">Näita aastat</label>
+                <select id="archive_selector">
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                </select> -->
+
+                <!-- Content -->
+                <h2>2020</h2>
+                <ul id="archive_2020" class="archive_content">
+                  <li>
+                    <a href="">Fail 1</a>
+                    <span class="file__type">PDF</span>
+                  </li>
+
+                  <li>
+                    <a href="">Fail 2</a>
+                    <span class="file__type">PDF</span>
+                  </li>
+
+                  <li>
+                    <a href="">Fail 3</a>
+                    <span class="file__type">DOCX</span>
+                  </li>
+                </ul>
+
+                <h2>2021</h2>
+                <ul id="archive_2021" class="archive_content">
+                  <li>
+                    <a href="">Fail 4</a>
+                    <span class="file__type">DOCX</span>
+                  </li>
+
+                  <li>
+                    <a href="">Fail 5</a>
+                    <span class="file__type">PDF</span>
+                  </li>
+                </ul>
             </section>
 
             <section id="contact">
