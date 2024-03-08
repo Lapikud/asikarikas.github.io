@@ -260,6 +260,11 @@ main li:before {
     height:200px;
 }
 
+#cm-img {
+    width:150px;
+    padding:1.5em;
+}
+
 /* Archive */
 #table {
     color:#fff
