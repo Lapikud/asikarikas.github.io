@@ -1,366 +1,321 @@
-/* FONTS */
-@font-face {
-    font-family: Visitor;
-    src: url(../../assets/fonts/visitor.ttf);
- }
-
- /* ANIMATIONS */
-@-webkit-keyframes yRotation {
-    from {
-        -webkit-transform: rotateY(0deg);
-                transform: rotateY(0deg);
-    } to {
-        -webkit-transform: rotateY(180deg);
-                transform: rotateY(180deg);
-    }
+.header-parent {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-@keyframes yRotation {
-    from {
-        -webkit-transform: rotateY(0deg);
-                transform: rotateY(0deg);
-    } to {
-        -webkit-transform: rotateY(180deg);
-                transform: rotateY(180deg);
-    }
+.header-parent-inactive {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-@-webkit-keyframes load{
-    from {
-        width: 0
-    }
+.header-child {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes load{
-    from {
-        width: 0
-    }
-}
-
-/* Set variables for colors because I'm lazy */
-:root {
-    --black: #17161c;
-    --orange: #ed8431;
-    --purple: #B53BFF;
-    --blue: #10dce3;
-}
-
-.yRotate {
-    -webkit-animation: yRotation 2s infinite linear;
-            animation: yRotation 2s infinite linear;
-}
-
-/* BACKGROUND */
-body {
-    background-color: #0a0a0a;
-}
-
-/* TEXT */
-body {
-    color: #fff;
-    font-size: 14px;
-    font-size: calc(14px + (22 - 18) * ((100vw - 300px) / (1600 - 300)));
-    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
-    font-family: 'Source Sans Pro', sans-serif;
-    overflow-wrap: break-word;
-}
-
-h1, h2, h3, h4, h5, th {
-    color: var(--purple);
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-h1 {
-    font-weight: 900;
-    color: #fff;
+html {
+    background-color: black;
+    color: white;
 }
 
 a {
-    color:#fff;
-    transition: 0.3s;
+    font-family: "Lato", serif;
+    color: #f0941d;
 }
 
-a:hover, a:active {
-    color: var(--orange);
-    transition: 0.3s;
+.archive-link {
+    color: white;
 }
 
-.highlight_1 {
-    color: #fff;
+.bold-900 {
+    font-weight: 900;
 }
 
-.highlight_2 {
-    color: var(--orange);
+.underline {
+    text-decoration-line: underline;
 }
 
-/* WHITESPACE */
-main {
-    padding-top: 30px;
-    padding-bottom: 80px; /* To accomodate the navbar */
+.loe-rohkem-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    background-color: black;
+    border: none;
+
 }
 
-section {
-    margin-bottom: 60px;
+.loe-rohkem-icon {
+    padding-right: 6%;
+    display: inline;
+    height: 48px;
 }
 
-h1, h2, h3, h4, h5 {
-    margin-bottom: 10px;
+.loe-rohkem {
+    font-family: "Lato", serif;
+    color: #007eff;
+    font-size: 24px;
+    font-weight: 900;
+    white-space: nowrap;
 }
 
-h2, h3, h4, h5 {
-    margin-top: 25px;
+.welcome-screen {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-h6 {
-    font-style: italic;
-    margin-top: 10px;
-    color: darkgray;
+.horizontal-content-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
 }
 
-/* PAGE SECTIONS */
-.col {
-    min-width: 300px;
+.vertical-content-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-/* Intro */
-#intro {
-    font-size: 2.7rem;
-    font-weight: 300;
-    font-family: Visitor;
-    color: var(--purple);
+.asikarikas-logo {
+    max-width: 33%;
 }
 
-/* Navbar */
-.navbar {
-    background-color: var(--purple);
+.lapikud-logo {
+    width: 19vw;
+    height: auto;
+    flex-shrink: 0;
 }
 
-.nav-link {
+.asikarikas-logo-year {
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 0;
+    text-align: center;
+}
+
+.active {
+    background-color: #007eff;
+    color: black;
+    flex: auto;
+    border: none;
+    margin: 0px 25px 0px 25px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-family: "Lato", serif;
+    font-weight: 900;
+    font-variant: normal;
     cursor: pointer;
 }
 
-.intro-nav-link {
-    padding: 0;
-    display: inline;
-}
-
-.nav-item {
-    margin-right: 16px;
-}
-
-.navbar .navbar-nav .nav-link {
-    color: rgb(0 0 0 / 100%);
-    font-family: Visitor;
-}
-
-/* Demo video */
-#demo_video_wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-  }
-
-#demo_video_wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-
-/* Prog. language options */
-.carousel-control-next, .carousel-control-prev {
-    display: block !important;
-    top: 65px;
-}
-
-#lang_options{
-    width: 300px;
-}
-
-#lang_options_title, .lang_name, .stat_bar {
-    font-family: 'Visitor';
-}
-
-#lang_options_title {
-    font-size: 3.8rem;
-    color: #B53BFF;
-}
-
-.lang_name {
-    font-size: 2rem;
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-.lang_icon {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    display: block;
-}
-
-/* Stat bar */
-.stat_bar, .stat_bar::before {
-    height: 35px;
-}
-
-.stat_bar {
-    background-color: #006f07;
-    border-radius: 6px;
-    margin-bottom: 6px;
-    font-size: 17px;
-    color: #000;
-}
-
-.stat_bar::before {
-    min-width: 75px;
-    content: attr(data-stat);
-    background-color: #4bff2f;
-    display: inline-block;
-    padding: 7px 10px;
-    border-radius: inherit;
-    -webkit-animation: load 2s 0s;
-            animation: load 2s 0s;
-}
-
-.stat_bar.low::before {
-    width: 40%;
-}
-
-.stat_bar.mid::before {
-    width: 70%;
-}
-
-.stat_bar.high::before {
-    width: 100%;
-}
-
-/* Why to participate? */
-main ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-main li:before {
-    content: '▪ ';
-    color: #4bff2f;
-    font-size: 1.2em;
-}
-
-/* Supporters */
-.supporter-img {
-    width: 200px;
-}
-
-#baskin-robbins-img {
-    width:250px;
-    padding:1.5em;
-    height:200px;
-}
-
-#cm-img {
-    width:170px;
-    padding:0.5em;
-}
-
-/* Archive */
-#table {
-    color:#fff
-}
-
-table td, table th {
-    border: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 1.5em;
-}
-
-.pdf-file {
-    height: 30px;
-}
-
-/* Contact */
-#asi_logo {
-    max-width: 300px;
-    display: block;
-    margin-bottom: 30px;
-}
-
-/* First round tasks button */
-.page-button {
-    background-color: var(--purple);
+.inactive {
+    background-color: black;
+    color: #007eff;
+    flex: auto;
     border: none;
-    border-radius: 1em;
-    padding: 0.3em;
-    padding-left: 1em;
-    padding-right: 1em;
-    color: #fff;
-    transition: 0.3s;
-    font-size: 1.1em;
+    margin: 0px 25px 0px 25px;
+    padding: 10px 0px 10px 0px;
+    font-size: 24px;
+    font-family: "Lato", serif;
+    font-weight: 900;
+    font-variant: normal;
+    cursor: pointer;
 }
 
-.page-button:hover {
-    background-color: #a379f7;
-    transition: 0.3s;
+.elevator_pitch {
+    font-family: "PixelifySans", sans-serif;
+    font-size: 36px;
+    max-width: 80%;
+    letter-spacing: 4px;
+    color: #007eff;
+    text-align: center;
+    font-weight: bold;
+    font-stretch: expanded;
 }
 
-.intro_link, #first_round a, #last_round a {
-    color: var(--orange);
-    transition: 0.3s;
-}
-
-.intro_link:hover, #first_round a:hover, #last_round a:hover {
-    color: #36c221;
-}
-
-/* RESPONSIVNESS */
-@media only screen and (min-width: 200px) {
-    #intro {
-        font-size: 2rem;
-    }
-
-    #lang_options_title {
-        font-size: 2.2rem;
-    }
-
-    .stat_bar{
-        max-width: 290px;
-    }
-
-}
-
-@media only screen and (min-width: 768px) {
-    #intro {
-        font-size: 2.7rem;
-    }
-}
-
-/* JAVASCRIPT */
-/* To avoid flickering due to text reveal effect */
-section:not(#introduction), #organizers {
-    visibility: hidden;
-}
-
-.img_center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-}
-
-.img_row {
+.main-parent {
     display: flex;
 }
 
-.img_column {
-    flex: 33.33%;
-    padding: 5px;
+.main-parent-inactive {
+    display: flex;
 }
 
-.img_in_column {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+.main-child {
+    flex: 1;
+    padding: 2% 7% 7% 7%;
+}
+
+.active-icon {
+    display: none;
+}
+
+.inactive-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .header-parent {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: left;
+    }
+
+    .header-parent-inactive {
+        display: none;
+    }
+
+    .active {
+        border-radius: 0;
+        display: flex;
+        justify-content: left;
+        margin: 0px 0px 0px 0px
+    }
+
+    .inactive {
+        color: white;
+        display: flex;
+        justify-content: left;
+        margin: 0px 0px 0px 0px
+    }
+
+    .active-icon {
+        padding: 0px 20px 0px 20px;
+        display: inline;
+    }
+
+    .inactive-icon {
+        padding: 0px 20px 0px 20px;
+        filter: invert(100%);
+        rotate: 90deg;
+        display: inline;
+    }
+
+    .mobile-menu {
+        display: flex;
+        padding: 6vw;
+        position: absolute;
+        right: 0em;
+    }
+}
+
+.mobile-menu-button-inactive {
+    background-color: #007eff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+
+.mobile-menu-button-active {
+    background-color: black;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.main-parent-inactive {
+    display: none;
+}
+
+.supporter-img {
+    width: 20vw;
+    padding: 1vw;
+}
+
+.asikarikas-logo_KD {
+    max-width: 25vw;
+}
+
+.toetajad {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* TELEFON */
+@media screen and (max-width: 480px) {
+
+    .asikarikas-logo {
+        max-width: 94vw;
+    }
+
+    .main-parent {
+        display: block;
+    }
+
+    .elevator_pitch {
+        font-size: 5vw;
+        max-width: fit-content;
+    }
+
+    .misASI {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    p {
+        font-size: 4vw;
+    }
+
+    li {
+        font-size: 4vw;
+        width: 95%;
+    }
+
+    .lapikud-logo {
+        width: 45vw;
+    }
+
+    .horizontal-content-div {
+        flex-direction: column;
+    }
+
+    .asikarikas-logo_KD {
+        max-width: 70vw;
+    }
+
+    .supporter-img {
+        width: 40vw;
+        padding: 8vw;
+        justify-items: center;
+    }
+
+    .main-child {
+        flex: 1;
+        padding: 20% 7% 7% 7%;
+    }
+
+    .toetajad {
+        justify-content: center;
+    }
 }

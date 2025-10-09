@@ -1,3 +1,42 @@
+var active_id = "b1"
+
+function buttonClick(id) {
+    if (active_id != id) {
+        document.getElementById(active_id).className = "inactive";
+        document.getElementById(id).className = "active";
+
+        document.getElementById(active_id).firstChild.className = "inactive-icon";
+        document.getElementById(id).firstChild.className = "active-icon";
+
+        document.getElementById(active_id+"-view").hidden = true;
+        document.getElementById(id+"-view").hidden = false;
+
+        document.getElementById("mobile-menu-open-icon").hidden = false;
+        document.getElementById("mobile-menu-close-icon").hidden = true;
+        document.getElementById("mobile-menu-button").className = "mobile-menu-button-inactive";
+        document.getElementById("header-view").className = "header-parent-inactive";
+        document.getElementById("main-view").className = "main-parent";
+
+        active_id = id;
+    }
+}
+
+function mobileMenuButtonClick(id) {
+    for (const element of document.getElementById(id).children) {
+        element.hidden = !(element.hidden);
+    }
+    if (document.getElementById(id).className == "mobile-menu-button-inactive") {
+        document.getElementById(id).className = "mobile-menu-button-active";
+        document.getElementById("header-view").className = "header-parent";
+        document.getElementById("main-view").className = "main-parent-inactive";
+    }
+    else {
+        document.getElementById(id).className = "mobile-menu-button-inactive";
+        document.getElementById("header-view").className = "header-parent-inactive";
+        document.getElementById("main-view").className = "main-parent";
+    }
+}
+
 /* MAIN */
 $(document).ready(function() {
     /* Intro text animation */
@@ -10,36 +49,3 @@ $(document).ready(function() {
     /* Smooth navigation scrolling */
     $(".nav-link").click(navScroll);
 });
-
-/* FUNCTIONS */
-/* Intro text */
-function revealText(textbox, text, speed, letter_position = 0){
-    setTimeout(function(){
-        if (letter_position < text.length){
-            textbox.append(text.charAt(letter_position));
-
-            /* Recursion until the whole text has been reveled */
-            letter_position++;
-            revealText(textbox, text, speed, letter_position);
-        }
-    }, speed);
-}
-function fitTextboxToText(textbox, text, hidden_content = false, content){
-    textbox.text(text); // Add placeholder text to measure how tall the textbox has to be
-    textbox.height(textbox.height()); // Save textbox current height
-    textbox.text(""); // Remove placeholder text
-
-    if (hidden_content){ // Content is previously hidden using CSS to avoid screen flickering
-        content.css("visibility", "visible");
-    }
-}
-
-/* Navbar */
-function navScroll(){
-    let destination_element = $($(this).data("destination")); // Navbar link points to a ceratin page element, which ID is stored in a data label
-
-    window.scrollTo({
-        top: destination_element.offset().top - 20,
-        behavior: "smooth"
-      });
-}
