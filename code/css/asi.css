@@ -48,17 +48,18 @@ a {
 .loe-rohkem-button {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 12px;
     cursor: pointer;
     background-color: black;
     border: none;
-
+    padding: 6px 12px;
 }
 
 .loe-rohkem-icon {
-    padding-right: 6%;
-    display: inline;
+    display: inline-block;
     height: 48px;
+    width: auto;
 }
 
 .loe-rohkem {
@@ -75,6 +76,21 @@ a {
     height: 90vh;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.welcome-screen .register {
+    flex: 0 0 auto;
+    align-self: center;
+    min-width: 180px;
+    padding: 16px 34px;
+    border: 2px solid #007eff;
+}
+
+.register:hover{
+    background-color: black;
+    color: #007eff;
+    border: 2px solid #007eff;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .horizontal-content-div {
@@ -112,7 +128,7 @@ a {
     background-color: #007eff;
     color: black;
     flex: auto;
-    border: none;
+    border: 2px solid transparent;
     margin: 0px 25px 0px 25px;
     padding: 10px 0px 10px 0px;
     border-radius: 5px;
@@ -121,20 +137,41 @@ a {
     font-weight: 900;
     font-variant: normal;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.15s;
 }
 
 .inactive {
     background-color: black;
     color: #007eff;
     flex: auto;
-    border: none;
+    border: 2px solid transparent;
     margin: 0px 25px 0px 25px;
     padding: 10px 0px 10px 0px;
+    border-radius: 5px;
     font-size: 24px;
     font-family: "Lato", serif;
     font-weight: 900;
     font-variant: normal;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.15s;
+}
+
+/* Hover states for navigation buttons - match the .register:hover behaviour */
+.active:hover,
+.inactive:hover {
+    background-color: black;
+    color: #007eff;
+    border-color: #007eff;
+}
+
+/* Focus styles for keyboard accessibility */
+.active:focus-visible,
+.inactive:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,126,255,0.18);
+    background-color: black;
+    color: #007eff;
+    border-color: #007eff;
 }
 
 .elevator_pitch {
@@ -179,6 +216,15 @@ a {
         flex-wrap: nowrap;
         align-items: stretch;
         justify-content: left;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 360ms cubic-bezier(.2,.9,.2,1), opacity 280ms ease;
+    }
+
+    .header-parent.nav-open {
+        max-height: 120vh;
+        opacity: 1;
     }
 
     .header-parent-inactive {
@@ -186,16 +232,19 @@ a {
     }
 
     .active {
-        border-radius: 0;
+        border-radius: 5px;
         display: flex;
         justify-content: left;
+        padding-left: 10px;
         margin: 0px 0px 0px 0px
     }
 
     .inactive {
-        color: white;
+        border-radius: 5px;
+        color: #007eff;
         display: flex;
         justify-content: left;
+        padding-left: 10px;
         margin: 0px 0px 0px 0px
     }
 
@@ -238,6 +287,18 @@ a {
     cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+    .header-parent.nav-open .mobile-menu-close-only {
+        display: block;
+        background: transparent;
+        color: #fff;
+        border: none;
+        font-size: 28px;
+        margin-left: auto;
+        margin-right: 16px;
+        cursor: pointer;
+    }
+}
 .main-parent-inactive {
     display: none;
 }
