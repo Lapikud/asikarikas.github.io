@@ -14,6 +14,38 @@
         rel="stylesheet">
 </head>
 
+<!-- Image SEO & Structured Data for Google -->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://asikarikas.ee/" />
+
+<!-- JSON-LD structured data for the event -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "ASI Karikas 2026",
+  "description": "Võistkondlik programmeerimisvõistlus kooliõpilastele, mida korraldab TalTechi Arvutisüsteemide Instituut ja MTÜ Lapikud.",
+  "startDate": "2026-02-01",
+  "endDate": "2026-02-14",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "TalTech Mektory",
+    "address": "Tallinna Tehnikaülikool, Tallinn, Estonia"
+  },
+  "image": [
+    "https://asikarikas.ee/assets/img/loppvoor_2025.jpg",
+    "https://asikarikas.ee/assets/logo/asikarikas_logo_white.svg"
+  ],
+  "organizer": {
+    "@type": "Organization",
+    "name": "TalTechi Arvutisüsteemide Instituut",
+    "url": "https://taltech.ee/arvutisusteemide-instituut"
+  }
+}
+</script>
+
 <body>
     <header>
         <div class="mobile-menu">
@@ -25,20 +57,13 @@
             </button>
         </div>
         <div class="header-parent-inactive" id="header-view">
-            <button class="active" id="b1" onclick="buttonClick(this.id);"><img src="assets/icon/arrow.svg"
-                    class="active-icon">Mis on ASI Karikas?</button>
-            <button class="inactive" id="b2" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg"
-                    class="inactive-icon">Miks osaleda?</button>
-            <button class="inactive" id="b3" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg"
-                    class="inactive-icon">Koduvoor</button>
-            <button class="inactive" id="b4" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg"
-                    class="inactive-icon">Lõppvoor</button>
-            <button class="inactive" id="b5" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg"
-                    class="inactive-icon">Kontakt</button>
-            <button class="inactive" id="b6" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg"
-                    class="inactive-icon">Arhiiv</button>
-            <button class="inactive" id="b7" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg"
-                    class="inactive-icon">Toetajad</button>
+            <button class="active" id="b1" onclick="buttonClick(this.id)">Mis on ASI Karikas?</button>
+            <button class="inactive" id="b2" onclick="buttonClick(this.id)">Miks osaleda?</button>
+            <button class="inactive" id="b3" onclick="buttonClick(this.id)">Koduvoor</button>
+            <button class="inactive" id="b4" onclick="buttonClick(this.id)">Lõppvoor</button>
+            <button class="inactive" id="b5" onclick="buttonClick(this.id)">Kontakt</button>
+            <button class="inactive" id="b6" onclick="buttonClick(this.id)">Arhiiv</button>
+            <button class="inactive" id="b7" onclick="buttonClick(this.id)">Toetajad</button>
         </div>
     </header>
     <main>
@@ -50,7 +75,8 @@
                         class="asikarikas-logo">
                     <p id="intro" class="elevator_pitch">ASI KARIKAS ON VÕISTKONDLIK PROGRAMMEERIMISVÕISTLUS
                         KOOLIÕPILASTELE</p>
-                    <button id="read-more-1" onclick="document.getElementById('rohkem-welcome').scrollIntoView();"
+                    <button class="active register" onclick="location.href='https://forms.gle/ZsKXaMdD6c1akfNz9'">REGISTREERIMA</button>
+                    <button id="read-more-1" onclick="document.getElementById('rohkem-welcome').scrollIntoView({ behavior: 'smooth' });"
                         class="loe-rohkem-button">
                         <img src="assets/icon/read-more.svg" alt="nool" class="loe-rohkem-icon">
                         <p class="loe-rohkem"><b>Loe Rohkem</b></p>
@@ -70,7 +96,7 @@
                     <br>
                     <p><span class="bold-900 underline">Koduvoor</span> toimub sul kodus. Lahendamiseks on antud kaks
                         ülesannet. Lahendada tuleb vähemalt üks. Lahenda rahulikult enda tempos. Selleks, et end
-                        võistlusesse kirja panna <a href=""><span class="bold-900">REGISTREERI end siin. </span></a> Nii
+                        võistlusesse kirja panna <a href="https://forms.gle/ZsKXaMdD6c1akfNz9"><span class="bold-900">REGISTREERI end siin. </span></a> Nii
                         saame sulle vajaliku info ja kuupäevad kiiresti edastada. Lisa sinna ka link enda gihtubi, kuhu
                         sa
                         lahendatud ülesanded paned. Juhul kui ei jõu ära teha kõik, siis saame tehtud töö hinnata.</p>
@@ -119,7 +145,7 @@
                         </div>
                     </div>
                     <button id="read-more-koduvoor"
-                        onclick="document.getElementById('rohkem-koduvoor').scrollIntoView();"
+                        onclick="document.getElementById('rohkem-koduvoor').scrollIntoView({ behavior: 'smooth' });"
                         class="loe-rohkem-button">
                         <img src="assets/icon/read-more.svg" alt="nool" class="loe-rohkem-icon">
                         <p class="loe-rohkem"><b>Loe Rohkem</b></p>

@@ -36,16 +36,3 @@ function mobileMenuButtonClick(id) {
         document.getElementById("main-view").className = "main-parent";
     }
 }
-
-/* MAIN */
-$(document).ready(function() {
-    /* Intro text animation */
-    let introText = "ASI KARIKAS ON VÕISTKONDLIK PROGRAMMEERIMISVÕISTLUS KOOLIÕPILASTELE.";
-    let introTextbox = $("#intro");
-
-    fitTextboxToText(introTextbox, introText, true, $("section:not(#introduction), #organizers"));
-    revealText(introTextbox, introText, 36);
-
-    /* Smooth navigation scrolling */
-    $(".nav-link").click(navScroll);
-});
