@@ -7,6 +7,7 @@
     flex-wrap: wrap;
     flex-direction: row;
 }
+
 .header-parent-inactive {
     display: flex;
     align-items: center;
@@ -14,53 +15,36 @@
     flex-wrap: wrap;
     flex-direction: row;
 }
+
 .header-child {
     flex: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 html {
     background-color: black;
     color: white;
 }
-h1 {
-    font-family: "Lato", serif;
-    color: #007eff;
-    font-size: 32px;
-    font-weight: 900;
-}
-h2 {
-    font-family: "Lato", serif;
-    color: #f0941d;
-    font-size: 24px;
-    font-weight: 900;
-    margin: 50px 0px;
-}
-p, li {
-    font-family: "Lato", serif;
-    color: #fafafa;
-    font-size: 24px;
-    text-align: justify;
-    line-height: 1.5;
-    font-size: 1.9vw;
-}
-li {
-    padding: 6px 0px;
-}
+
 a {
     font-family: "Lato", serif;
     color: #f0941d;
 }
+
 .archive-link {
     color: white;
 }
+
 .bold-900 {
     font-weight: 900;
 }
+
 .underline {
     text-decoration-line: underline;
 }
+
 .loe-rohkem-button {
     display: flex;
     align-items: center;
@@ -70,11 +54,13 @@ a {
     border: none;
 
 }
+
 .loe-rohkem-icon {
     padding-right: 6%;
     display: inline;
     height: 48px;
 }
+
 .loe-rohkem {
     font-family: "Lato", serif;
     color: #007eff;
@@ -82,6 +68,7 @@ a {
     font-weight: 900;
     white-space: nowrap;
 }
+
 .welcome-screen {
     display: flex;
     flex-direction: column;
@@ -89,6 +76,7 @@ a {
     justify-content: space-evenly;
     align-items: center;
 }
+
 .horizontal-content-div {
     display: flex;
     align-items: center;
@@ -96,25 +84,30 @@ a {
     gap: 30px;
     position: relative;
 }
+
 .vertical-content-div {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
 .asikarikas-logo {
     max-width: 33%;
 }
+
 .lapikud-logo {
-    width: 70vw;
+    width: 19vw;
     height: auto;
     flex-shrink: 0;
 }
+
 .asikarikas-logo-year {
     font-size: 30px;
     font-weight: 900;
     margin-top: 0;
     text-align: center;
 }
+
 .active {
     background-color: #007eff;
     color: black;
@@ -129,6 +122,7 @@ a {
     font-variant: normal;
     cursor: pointer;
 }
+
 .inactive {
     background-color: black;
     color: #007eff;
@@ -142,6 +136,7 @@ a {
     font-variant: normal;
     cursor: pointer;
 }
+
 .elevator_pitch {
     font-family: "PixelifySans", sans-serif;
     font-size: 36px;
@@ -156,19 +151,24 @@ a {
 .main-parent {
     display: flex;
 }
+
 .main-parent-inactive {
     display: flex;
 }
+
 .main-child {
     flex: 1;
     padding: 2% 7% 7% 7%;
 }
+
 .active-icon {
     display: none;
 }
+
 .inactive-icon {
     display: none;
 }
+
 .mobile-menu {
     display: none;
 }
@@ -180,52 +180,142 @@ a {
         align-items: stretch;
         justify-content: left;
     }
+
     .header-parent-inactive {
         display: none;
     }
+
     .active {
         border-radius: 0;
         display: flex;
         justify-content: left;
         margin: 0px 0px 0px 0px
     }
+
     .inactive {
         color: white;
         display: flex;
         justify-content: left;
         margin: 0px 0px 0px 0px
-        }
+    }
+
     .active-icon {
         padding: 0px 20px 0px 20px;
         display: inline;
-    }    
+    }
+
     .inactive-icon {
         padding: 0px 20px 0px 20px;
         filter: invert(100%);
         rotate: 90deg;
         display: inline;
     }
+
     .mobile-menu {
         display: flex;
-        justify-content: end;
+        padding: 6vw;
+        position: absolute;
+        right: 0em;
     }
-    .mobile-menu-button-inactive {
-        background-color: #007eff;
-        border: none;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-    }
-    .mobile-menu-button-active {
-        background-color: black;
-        border: none;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-    }
-    .main-parent-inactive {
-        display: none;
+}
+
+.mobile-menu-button-inactive {
+    background-color: #007eff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+
+.mobile-menu-button-active {
+    background-color: black;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.main-parent-inactive {
+    display: none;
+}
+
+.supporter-img {
+    width: 20vw;
+    padding: 1vw;
+}
+
+.asikarikas-logo_KD {
+    max-width: 25vw;
+}
+
+.toetajad {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* TELEFON */
+@media screen and (max-width: 480px) {
+
+    .asikarikas-logo {
+        max-width: 94vw;
     }
 
+    .main-parent {
+        display: block;
+    }
+
+    .elevator_pitch {
+        font-size: 5vw;
+        max-width: fit-content;
+    }
+
+    .misASI {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    p {
+        font-size: 4vw;
+    }
+
+    li {
+        font-size: 4vw;
+        width: 95%;
+    }
+
+    .lapikud-logo {
+        width: 45vw;
+    }
+
+    .horizontal-content-div {
+        flex-direction: column;
+    }
+
+    .asikarikas-logo_KD {
+        max-width: 70vw;
+    }
+
+    .supporter-img {
+        width: 40vw;
+        padding: 8vw;
+        justify-items: center;
+    }
+
+    .main-child {
+        flex: 1;
+        padding: 20% 7% 7% 7%;
+    }
+
+    .toetajad {
+        justify-content: center;
+    }
 }

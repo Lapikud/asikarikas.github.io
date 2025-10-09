@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="et">
+
 <head>
     <title>ASI Karikas</title>
-    <link rel="stylesheet" type="text/css" href="assets/fonts/fonts.css"/>
-    <link rel="stylesheet" type="text/css" href="code/css/asi.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/fonts/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="code/css/asi.css" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="mobile-menu">
-            <button id="mobile-menu-button" class="mobile-menu-button-inactive" onclick="mobileMenuButtonClick(this.id)">
+            <button id="mobile-menu-button" class="mobile-menu-button-inactive"
+                onclick="mobileMenuButtonClick(this.id)">
                 <img id="mobile-menu-open-icon" src="assets/icon/menu-open.svg" class="mobile-menu-open-icon">
-                <img id="mobile-menu-close-icon" src="assets/icon/menu-close.svg" class="mobile-menu-close-icon" hidden="">
+                <img id="mobile-menu-close-icon" src="assets/icon/menu-close.svg" class="mobile-menu-close-icon"
+                    hidden="">
             </button>
         </div>
         <div class="header-parent-inactive" id="header-view">
-            <button class="active" id="b1" onclick="buttonClick(this.id);"><img src="assets/icon/arrow.svg" class="active-icon">Mis on ASI Karikas?</button>
-            <button class="inactive" id="b2" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg" class="inactive-icon">Miks osaleda?</button>
-            <button class="inactive" id="b3" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg" class="inactive-icon">Koduvoor</button>
-            <button class="inactive" id="b4" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg" class="inactive-icon">Lõppvoor</button>
-            <button class="inactive" id="b5" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg" class="inactive-icon">Kontakt</button>
-            <button class="inactive" id="b6" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg" class="inactive-icon">Arhiiv</button>
-            <button class="inactive" id="b7" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg" class="inactive-icon">Toetajad</button>
+            <button class="active" id="b1" onclick="buttonClick(this.id);"><img src="assets/icon/arrow.svg"
+                    class="active-icon">Mis on ASI Karikas?</button>
+            <button class="inactive" id="b2" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg"
+                    class="inactive-icon">Miks osaleda?</button>
+            <button class="inactive" id="b3" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg"
+                    class="inactive-icon">Koduvoor</button>
+            <button class="inactive" id="b4" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg"
+                    class="inactive-icon">Lõppvoor</button>
+            <button class="inactive" id="b5" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg"
+                    class="inactive-icon">Kontakt</button>
+            <button class="inactive" id="b6" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg"
+                    class="inactive-icon">Arhiiv</button>
+            <button class="inactive" id="b7" onclick="buttonClick(this.id)"><img src="assets/icon/arrow.svg"
+                    class="inactive-icon">Toetajad</button>
         </div>
     </header>
     <main>
@@ -33,25 +46,40 @@
 
             <div id="b1-view" class="main-child">
                 <div class="welcome-screen">
-                    <img src="assets/logo/asikarikas_logo_white.svg" alt="asikarikas_logo_valge" class="asikarikas-logo">
-                    <p class="elevator_pitch">ASI KARIKAS ON VÕISTKONDLIK PROGRAMMEERIMISVÕISTLUS KOOLIÕPILASTELE</p>
-                    <button id="read-more-1" onclick="document.getElementById('rohkem-welcome').scrollIntoView();" class="loe-rohkem-button">
+                    <img src="assets/logo/asikarikas_logo_white.svg" alt="asikarikas_logo_valge"
+                        class="asikarikas-logo">
+                    <p id="intro" class="elevator_pitch">ASI KARIKAS ON VÕISTKONDLIK PROGRAMMEERIMISVÕISTLUS
+                        KOOLIÕPILASTELE</p>
+                    <button id="read-more-1" onclick="document.getElementById('rohkem-welcome').scrollIntoView();"
+                        class="loe-rohkem-button">
                         <img src="assets/icon/read-more.svg" alt="nool" class="loe-rohkem-icon">
                         <p class="loe-rohkem"><b>Loe Rohkem</b></p>
                     </button>
                 </div>
                 <br>
-                <h1 id="rohkem-welcome">Tegemist on programmeerimisvõistlusega</h1>
-                <div class="horizontal-content-div">
-                    <p>Võistlust korraldavad <a href="https://taltech.ee/arvutisusteemide-instituut">Tallinna Tehnikaülikooli Arvutisüsteemide Instituut</a> ning tudengite organisatsioon tarkvaraarenduse klubi <a href="https://www.lapikud.ee/">MTÜ Lapikud.</a></p>
-                    <img src="assets/logo/LAP_logo_v2_transp.png" alt="lapikud_logo" class="lapikud-logo">
-                </div>
+                <div class="misASI">
+                    <h1 id="rohkem-welcome">Tegemist on programmeerimisvõistlusega</h1>
+                    <div class="horizontal-content-div">
+                        <p>Võistlust korraldavad <a href="https://taltech.ee/arvutisusteemide-instituut">Tallinna
+                                Tehnikaülikooli Arvutisüsteemide Instituut</a> ning tudengite organisatsioon
+                            tarkvaraarenduse klubi <a href="https://www.lapikud.ee/">MTÜ Lapikud.</a></p>
+                        <img src="assets/logo/LAP_logo_v2_transp.png" alt="lapikud_logo" class="lapikud-logo">
+                    </div>
 
-                <h1>Võistlus jaguneb kaheks vooruks:</h1>
-                <br>
-                <p><span class="bold-900 underline">Koduvoor</span> toimub sul kodus. Lahendamiseks on antud kaks ülesannet. Lahendada tuleb vähemalt üks. Lahenda rahulikult enda tempos. Selleks, et end võistlusesse kirja panna <a href=""><span class="bold-900">REGISTREERI</span> end siin.</a> Nii saame sulle vajaliku info ja kuupäevad kiiresti edastada. Lisa sinna ka link enda gihtubi, kuhu sa lahendatud ülesanded paned. Juhul kui ei jõu ära teha kõik, siis saame tehtud töö hinnata.</p>
-                <br>
-                <p><span class="bold-900 underline">Lõppvooru</span> kutsume 2 parimat kuni 4-liikmelist võistkonda (soovi korral juhendajaga).<br>Anname lahendamiseks ühe ülesande. Lahendamiseks on 4 h. Koodi esitamisel peab olema ka README fail, milles on märgitud esitaja kool ja tiimi liikmete nimed.</p>
+                    <h1>Võistlus jaguneb kaheks vooruks:</h1>
+                    <br>
+                    <p><span class="bold-900 underline">Koduvoor</span> toimub sul kodus. Lahendamiseks on antud kaks
+                        ülesannet. Lahendada tuleb vähemalt üks. Lahenda rahulikult enda tempos. Selleks, et end
+                        võistlusesse kirja panna <a href=""><span class="bold-900">REGISTREERI end siin. </span></a> Nii
+                        saame sulle vajaliku info ja kuupäevad kiiresti edastada. Lisa sinna ka link enda gihtubi, kuhu
+                        sa
+                        lahendatud ülesanded paned. Juhul kui ei jõu ära teha kõik, siis saame tehtud töö hinnata.</p>
+                    <br>
+                    <p><span class="bold-900 underline">Lõppvooru</span> kutsume 2 parimat kuni 4-liikmelist võistkonda
+                        (soovi korral juhendajaga).<br>Anname lahendamiseks ühe ülesande. Lahendamiseks on 4 h. Koodi
+                        esitamisel peab olema ka README fail, milles on märgitud esitaja kool ja tiimi liikmete nimed.
+                    </p>
+                </div>
             </div>
 
             <div id="b2-view" class="main-child" hidden="">
@@ -62,7 +90,11 @@
                     <li>Võtad mõõtu ülikooli tudengitega.</li>
                     <li>Õpid midagi uut ja saad praktilise kogemuse.</li>
                     <li>Tutvud varakult ülikoolieluga.</li>
-                    <li>Kõigil lõppvoorus osalejatel antakse TTÜ IT-teaduskonna sisseastumisel eelised õppeainetes Programmeerimine I (IAX0583) ja Programmeerimine II (IAX0584).</li>
+                    <li>Kõigil lõppvoorus osalejatel antakse TTÜ IT-teaduskonna sisseastumisel eelised õppeainetes
+                        Programmeerimine I (IAX0583) ja Programmeerimine II (IAX0584).</li>
+                    <li>Tallinna Tehnikaülikooli sisseastumise aastal või sellele eelnenud kahel aastal lõppvooru
+                        jõudnud kandidaat võetakse vastu eritingimusel IT-teaduskonna bakalaureuseõppe õppekavadele.
+                    </li>
                 </ul>
             </div>
 
@@ -70,84 +102,87 @@
                 <div class="welcome-screen">
                     <div class="horizontal-content-div">
                         <div>
-                            <img src="assets/logo/asikarikas_logo_white.svg" alt="asikarikas_logo_valge" style="max-width: 25vw;">
+                            <img src="assets/logo/asikarikas_logo_white.svg" alt="asikarikas_logo_valge"
+                                class="asikarikas-logo_KD">
                             <p class="asikarikas-logo-year">2026</p>
                         </div>
                         <div>
                             <h1>Koduvoor</h1>
-                            <p>Koduvoor toimub Sul kodus. Lahendamisele kulub vaid kaks ülesannet. <b class="underline">Esitada tuleb vähemalt üks ülesanne.</b></p>
-                            <p>Kui üks ülesannete koodidest ei tööta või on pooleli, siis esita see ka. Pea meeles: parem on esitada kogu tehtud töö kui mitte midagi.</p>
-                            <p><b style="color: #f0941d">TÄHTAEG</b> on <b class="underline">15.01.2026 23:59</b><br>Kõik esimeses voorus osalejad saavad osavõtudiplomi.</p>
-                            <p>Kui soovid osaleda, siis <a href="https://forms.gle/ZsKXaMdD6c1akfNz9" style="color: #f0941d"><b>REGISTREERI END SIIN!</b></a></p>
+                            <p>Koduvoor toimub Sul kodus. Lahendamisele kulub vaid kaks ülesannet. <b
+                                    class="underline">Esitada tuleb vähemalt üks ülesanne.</b></p>
+                            <p>Kui üks ülesannete koodidest ei tööta või on pooleli, siis esita see ka. Pea meeles:
+                                parem on esitada kogu tehtud töö kui mitte midagi.</p>
+                            <p><b style="color: #f0941d">TÄHTAEG</b> on <b class="underline">01.02.2026
+                                    23:59</b><br>Kõik esimeses voorus osalejad saavad osavõtudiplomi.</p>
+                            <p>Kui soovid osaleda, siis <a href="https://forms.gle/ZsKXaMdD6c1akfNz9"
+                                    style="color: #f0941d"><b>REGISTREERI END SIIN!</b></a></p>
                         </div>
                     </div>
-                    <button id="read-more-koduvoor" onclick="document.getElementById('rohkem-koduvoor').scrollIntoView();" class="loe-rohkem-button">
+                    <button id="read-more-koduvoor"
+                        onclick="document.getElementById('rohkem-koduvoor').scrollIntoView();"
+                        class="loe-rohkem-button">
                         <img src="assets/icon/read-more.svg" alt="nool" class="loe-rohkem-icon">
                         <p class="loe-rohkem"><b>Loe Rohkem</b></p>
                     </button>
                 </div>
                 <div class="horizontal-content-div">
                     <div>
-                        <h1 id="rohkem-koduvoor">ASI KARIKA 2025 koduvooru ülesanded</h1>
-                        <p><i style="font-weight: 300;">NB! Kõigi ülesannete lahendamine ei ole kohustuslik.<br>Siin on toodud vaid lühikokkuvõte ülesannetest. <a href="assets/doc/ASI-KARIKA-2025-koduvooru-ülesanded.pdf">Uuri tervet ülesannet siin!</a></i></p>
-
-                        <h2>1. YLESANNE (50 punkti)</h2>
-                        <p style="margin-bottom: 0;">Kriteeriumid lahendusele:</p>
-                        <ul>
-                            <li>Krtieerium 1;</li>
-                            <li>\kriteerium2;</li>
-                        </ul>
+                        <h1 id="rohkem-koduvoor">ASI KARIKA 2026 koduvooru ülesanded</h1>
+                        <p><i style="font-weight: 300;">NB! Kõigi ülesannete lahendamine ei ole kohustuslik. <a
+                                    href="assets/doc/ASI-KARIKA-2025-koduvooru-ülesanded.pdf">Uuri tervet ülesannet
+                                    siin!</a></i></p>
                     </div>
-                    <img src="assets/img/yl_1.png" alt="ylesanne_1_pilt" style="max-width: 25vw;">
-                </div>
-                <br><br>
-                <h2>2. Ylesanne (50 punkti)</h2>
-                <p>Teie ülesandeks on lahendada ylesanne</p>
-                <br>
-                <p style="margin-bottom: 0;">Teie töö hindamisel võetakse arvesse järgmist:</p>
-                <div class="horizontal-content-div">
-                <ol>
-                    <li><b>asi t66tab</b> – ylesanne t66tab;</li>
-                    <li><b>asi on tethtud</b> – ylesanne on tehtud</li>
-                    <li><b>asi karikas</b> –asi on karikas;</li>
-                </ol>
-                <img src="assets/img/yl_2.png" alt="ylesanne_2_pilt" style="max-width: 25vw;">
                 </div>
             </div>
 
             <div id="b4-view" class="main-child" hidden="">
                 <h1>Lõppvoor</h1>
 
-                <p>Koduvooru kuni kaks 4-liikmelist võistkonda (soovi korral juhendajaga) kutsutakse lõppvooru, mis toimub Tallinna Tehnikaülikooli Metkory majas <u style="text-decoration: underline; color: #f0941d">15. märtsil 2025.</u></p>
+                <p>Koduvooru kuni kaks 4-liikmelist võistkonda (soovi korral juhendajaga) kutsutakse lõppvooru, mis
+                    toimub Tallinna Tehnikaülikooli Metkory majas <u style="text-decoration: underline; color: #f0941d">
+                        14. veebruaril 2026.</u></p>
 
-                <p>Kõigile lõppvõistlustest osavõitjatele pakutakse võistluspäeval süüa. Kõigil lõppvoorus osalejatel antakse TTÜ IT-teaduskonna sisseastumisel eelised õppeainetes Programmeerimine I (IAX0583) ja Programmeerimine II (IAX0584).</p>
+                <p>Kõigile lõppvõistlustest osavõitjatele pakutakse võistluspäeval süüa. Kõigil lõppvoorus osalejatel
+                    antakse TTÜ IT-teaduskonna sisseastumisel eelised õppeainetes Programmeerimine I (IAX0583) ja
+                    Programmeerimine II (IAX0584).</p>
             </div>
 
             <div id="b5-view" class="main-child" hidden="">
                 <h1>Tekkisid küsimused?</h1>
 
-                <p>Kirjuta meile <a href="asikarikas@asikarikas.ee">asikarikas@asikarikas.ee</a> vastame esimesel võimalusel.</p>
-
-                <h1>Osalemise kord</h1>
-
-                <p></p>
+                <p>Kirjuta meile <a href="asikarikas@asikarikas.ee">asikarikas@asikarikas.ee</a> vastame esimesel
+                    võimalusel.</p>
+                <br>
+                <h1>Reeglid</h1>
+                <li>Programmeermiskeeled: C, Python, C#, C++ või Java</li>
+                <li>AI kastuamine koodi genereerimiseks on lubatud nii koduvoorus kui ka lõppvoorus. Tingimusel, et seda
+                    dokumenteeritakse.</li>
+                <li>Koduvooru ülesandeid võib esitada vabas vormis. Lõppvoorus ülesannete esitamine toimub githubi
+                    keskkonnas. </li>
+                <li>Lõpuvoorus väljastatakse vaid üks karikas.</li>
             </div>
 
             <div id="b6-view" class="main-child" hidden="">
                 <h1>ASI KARIKAS 2025 KOKKUVÕTE</h1>
 
                 <p>
-                        Tänavu, 15. märtsil 2025, korraldati Tallinna Tehnikaülikooli Mektory majas ASI Karikas programmeerimisvõistluse lõppvoor. Sel aastal katsusid jõudu Miina Härma Gümnaasiumi segatiim Tallinna Tehnikagümnaasiumiga ja Gustav Adolfi Gümnaasiumi võistkond. Finaalis osales ka etalontiim, mis koosnes Tehnikaülikooli küberturbe tehnoloogiate eriala esmakursuslastest, kellega said koolide võistkonnad mõõtu võtta.
-                        </p>
-                        <p>
-                        Võistluse raames pidid osalejad looma keemia reaktsioonivõrrandite tasakaalustamiseks programmi. Pärast pingelist võitlust tuli võitjaks Gustav Adolfi Gümnaasiumi võistkond.
-                        </p>
-                        <p>
-                        Täname omalt poolt ettevõtteid, kes toetasid selle aasta võistluse finaalis auhindade ja korraldusega - TTÜ Akadeemiline Ametiliit, Mektory, Baskin Robbins, Zone ja Cybernetica.
-                        </p>
-                        
-                    <img src="assets/img/loppvoor_2025.jpg" alt="ASI Karikas 2025 lõppvoor" style="max-width: 100vw;">
-                    <p>Fotograaf: Karina Reisel, <a href="https://flic.kr/s/aHBqjC5zQQ">https://flic.kr/s/aHBqjC5zQQ</a></p>
+                    Tänavu, 15. märtsil 2025, korraldati Tallinna Tehnikaülikooli Mektory majas ASI Karikas
+                    programmeerimisvõistluse lõppvoor. Sel aastal katsusid jõudu Miina Härma Gümnaasiumi segatiim
+                    Tallinna Tehnikagümnaasiumiga ja Gustav Adolfi Gümnaasiumi võistkond. Finaalis osales ka etalontiim,
+                    mis koosnes Tehnikaülikooli küberturbe tehnoloogiate eriala esmakursuslastest, kellega said koolide
+                    võistkonnad mõõtu võtta.
+                </p>
+                <p>
+                    Võistluse raames pidid osalejad looma keemia reaktsioonivõrrandite tasakaalustamiseks programmi.
+                    Pärast pingelist võitlust tuli võitjaks Gustav Adolfi Gümnaasiumi võistkond.
+                </p>
+                <p>
+                    Täname omalt poolt ettevõtteid, kes toetasid selle aasta võistluse finaalis auhindade ja
+                    korraldusega - TTÜ Akadeemiline Ametiliit, Mektory, Baskin Robbins, Zone ja Cybernetica.
+                </p>
+
+                <img src="assets/img/loppvoor_2025.jpg" alt="ASI Karikas 2025 lõppvoor" style="max-width: 100%;">
+                <p>Fotograaf: Karina Reisel, <a href="https://flic.kr/s/aHBqjC5zQQ">https://flic.kr/s/aHBqjC5zQQ</a></p>
                 <h1>FINAALIDES OSALENUD KOOLID</h1>
                 <br>
                 <ul>
@@ -163,21 +198,47 @@
                     <li>Tartu Jaan Poska Gümnaasium</li>
                 </ul>
                 <br><br>
-                <h1>ARHIIV</h1>
+                <h1>KODUVOORU ÜLESANNETE ARHIIV</h1>
                 <br>
-                <p><a href="assets/doc/ASI_karikas_2024_1voor.pdf" class="archive-link">ASI karikas 2024 koduvoor</a></p>
-                <p><a href="assets/doc/ASI_karikas_2023_1voor.pdf" class="archive-link">ASI karikas 2023 koduvoor</a></p>
-                <p><a href="assets/doc/ASI_karikas_2022_2voor.pdf" class="archive-link">ASI karikas 2022 koduvoor</a></p>
-                <p><a href="assets/doc/ASI_karikas_2021_1voor.pdf" class="archive-link">ASI karikas 2021 koduvoor</a></p>
-                <p><a href="assets/doc/ASI_karikas_2020_1voor.pdf" class="archive-link">ASI karikas 2020 koduvoor</a></p>
-                <p><a href="assets/doc/ASI_karikas_2019_1voor.pdf" class="archive-link">ASI karikas 2019 koduvoor</a></p>
+                <p><a href="assets/doc/ASI_karikas_2024_1voor.pdf" class="archive-link">ASI karikas 2024 koduvoor</a>
+                </p>
+                <p><a href="assets/doc/ASI_karikas_2023_1voor.pdf" class="archive-link">ASI karikas 2023 koduvoor</a>
+                </p>
+                <p><a href="assets/doc/ASI_karikas_2022_2voor.pdf" class="archive-link">ASI karikas 2022 koduvoor</a>
+                </p>
+                <p><a href="assets/doc/ASI_karikas_2021_1voor.pdf" class="archive-link">ASI karikas 2021 koduvoor</a>
+                </p>
+                <p><a href="assets/doc/ASI_karikas_2020_1voor.pdf" class="archive-link">ASI karikas 2020 koduvoor</a>
+                </p>
+                <p><a href="assets/doc/ASI_karikas_2019_1voor.pdf" class="archive-link">ASI karikas 2019 koduvoor</a>
+                </p>
             </div>
 
             <div id="b7-view" class="main-child" hidden="">
-                <h1>2024 AASTA TOETAJAD</h1>
+
+                <section id="supporters">
+                    <h1>2025. AASTA TOETAJAD</h1>
+                    <div class="toetajad">
+                        <a href='https://taltech.ee/' target='_blank'><img src="assets/logo/taltech2.svg" alt="Taltech"
+                                class="supporter-img" /></a>
+                        <a href='https://taltech.ee/ametiliit' target='_blank'><img src='assets/logo/AAL.svg'
+                                alt="TTÜ AAL" class="supporter-img" /></a>
+                        <a href='https://levira.com/' target='_blank'><img src="assets/logo/levira_logo_white.svg"
+                                alt="Levira" class="supporter-img" /></a>
+                        <br>
+                        <a href="https://www.baskinrobbinsmea.com/en" target="_blank"><img
+                                src='assets/logo/baskin-robbins.svg' alt='Baskin-Robbins' class="supporter-img"
+                                id="baskin-robbins-img"></a>
+                        <a href='https://www.zone.ee/et/' target='_blank'><img
+                                src="assets/logo/zone_logo_WHITE_middle.svg" alt="Zone" class="supporter-img"></a>
+                        <a href='https://cyber.ee/' target='_blank'><img src="assets/logo/Cybernetica_logo.png"
+                                alt="Cybernetica" class="supporter-img"></a>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
     <script src="code/js/asi.js"></script>
 </body>
+
 </html>

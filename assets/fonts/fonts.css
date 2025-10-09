@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "PixelifySans";
+    font-family: "Lato", serif;
     src: url('PixelifySans-Regular.ttf');
     font-weight: normal;
 }
@@ -8,4 +8,86 @@
     src: url('PixelifySans-Bold.ttf');
     font-weight: bold;
     font-stretch: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1, h2, p, li {
+    font-family: "Lato", serif;
+}
+h1 {
+    color: #007eff;
+}
+h2 {
+    color: #f0941d;
+    margin: 50px 0px;
+}
+p, li {
+    color: #fafafa;
+    text-align: justify;
+}
+
+
+/* TELEFON */
+@media screen and (max-width: 480px) {
+
+     h1 {
+    color: #007eff;
+    font-size: 3vw;
+    font-weight: 900;
+    }
+
+    h2 {
+        color: #f0941d;
+        font-size: 24px;
+        font-weight: 900;
+        margin: 50px 0px;
+    }
+    p, li {
+        color: #fafafa;
+        font-size: 24px;
+        text-align: justify;
+        line-height: 1.5;
+        font-size: 1.9vw;
+    }
+    li {
+        padding: 6px 0px;
+    }
+}
+
+/*ARVUTI*/
+@media screen and (min-width: 1200px) {
+
+   
+    h1 {
+    color: #007eff;
+    font-size: 3vw;
+    font-weight: 900;
+    }
+    h2 {
+        color: #f0941d;
+        font-size: 24px;
+        font-weight: 900;
+        margin: 50px 0px;
+    }
+    p, li {
+        color: #fafafa;
+        font-size: 24px;
+        text-align: justify;
+        line-height: 1.5;
+        font-size: 1.9vw;
+    }
+    li {
+        padding: 6px 0px;
+    }
 }
