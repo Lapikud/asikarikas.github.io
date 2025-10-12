@@ -248,6 +248,39 @@ a {
         margin: 0px 0px 0px 0px
     }
 
+    /* Mobile navigation link styles */
+    .header-parent a,
+    .header-parent-inactive a {
+        border-radius: 5px;
+        display: flex;
+        justify-content: left;
+        padding-left: 10px;
+        margin: 0px 0px 0px 0px;
+        text-decoration: none;
+    }
+
+    .header-parent a.active,
+    .header-parent-inactive a.active {
+        border-radius: 5px;
+        display: flex;
+        justify-content: left;
+        padding-left: 10px;
+        margin: 0px 0px 0px 0px;
+        background-color: #007eff;
+        color: black;
+    }
+
+    .header-parent a.inactive,
+    .header-parent-inactive a.inactive {
+        border-radius: 5px;
+        color: #007eff;
+        display: flex;
+        justify-content: left;
+        padding-left: 10px;
+        margin: 0px 0px 0px 0px;
+        background-color: black;
+    }
+
     .active-icon {
         padding: 0px 20px 0px 20px;
         display: inline;
@@ -379,4 +412,58 @@ a {
     .toetajad {
         justify-content: center;
     }
+}
+
+/* Navigation link styles for multi-page setup */
+.header-parent-inactive a,
+.header-parent a {
+    background-color: black;
+    color: #007eff;
+    flex: auto;
+    border: 2px solid transparent;
+    margin: 0px 25px 0px 25px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 5px;
+    font-size: 24px;
+    font-family: "Lato", serif;
+    font-weight: 900;
+    font-variant: normal;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.15s;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-parent-inactive a.active,
+.header-parent a.active {
+    background-color: #007eff;
+    color: black;
+}
+
+/* Hover states for navigation links */
+.header-parent-inactive a:hover,
+.header-parent a:hover {
+    background-color: black;
+    color: #007eff;
+    border-color: #007eff;
+}
+
+.header-parent-inactive a.active:hover,
+.header-parent a.active:hover {
+    background-color: black;
+    color: #007eff;
+    border-color: #007eff;
+}
+
+/* Focus styles for keyboard accessibility */
+.header-parent-inactive a:focus-visible,
+.header-parent a:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,126,255,0.18);
+    background-color: black;
+    color: #007eff;
+    border-color: #007eff;
 }
