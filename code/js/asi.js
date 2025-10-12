@@ -1,3 +1,55 @@
+// Navigation template (GitHub Pages compatible)
+function getNavigationHTML() {
+    return `
+    <header>
+        <div class="mobile-menu">
+            <button id="mobile-menu-button" class="mobile-menu-button-inactive"
+                onclick="mobileMenuButtonClick(this.id)">
+                <img id="mobile-menu-open-icon" src="assets/icon/menu-open.svg" class="mobile-menu-open-icon">
+                <img id="mobile-menu-close-icon" src="assets/icon/menu-close.svg" class="mobile-menu-close-icon"
+                    hidden="">
+            </button>
+        </div>
+        <div class="header-parent-inactive" id="header-view">
+            <a href="index.html" data-page="index.html">Mis on ASI Karikas?</a>
+            <a href="miks-osaleda.html" data-page="miks-osaleda.html">Miks osaleda?</a>
+            <a href="koduvoor.html" data-page="koduvoor.html">Koduvoor</a>
+            <a href="loppvoor.html" data-page="loppvoor.html">Lõppvoor</a>
+            <a href="kontakt.html" data-page="kontakt.html">Kontakt</a>
+            <a href="arhiiv.html" data-page="arhiiv.html">Arhiiv</a>
+            <a href="toetajad.html" data-page="toetajad.html">Toetajad</a>
+        </div>
+    </header>`;
+}
+
+// Load navigation component and set active page (GitHub Pages compatible)
+function loadNavigation() {
+    try {
+        // Insert navigation HTML
+        const navigationHTML = getNavigationHTML();
+        document.body.insertAdjacentHTML('afterbegin', navigationHTML);
+        
+        // Set active page based on current URL
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('header a[data-page]');
+        
+        navLinks.forEach(link => {
+            if (link.getAttribute('data-page') === currentPage) {
+                link.classList.add('active');
+                link.classList.remove('inactive');
+            } else {
+                link.classList.add('inactive');
+                link.classList.remove('active');
+            }
+        });
+    } catch (error) {
+        console.error('Error loading navigation:', error);
+    }
+}
+
+// Initialize navigation when DOM is loaded
+document.addEventListener('DOMContentLoaded', loadNavigation);
+
 // Mobile menu functionality for multi-page navigation
 function mobileMenuButtonClick(id) {
     for (const element of document.getElementById(id).children) {
