@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+    <title>ASI Karikas - Koduvoor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="ASI Karikas koduvoor - lahenda kaks ülesannet kodus. Tähtaeg 01.02.2026.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://asikarikas.ee/koduvoor" />
+    
+    <link rel="stylesheet" type="text/css" href="assets/fonts/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="code/css/asi.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="mobile-menu">
+            <button id="mobile-menu-button" class="mobile-menu-button-inactive"
+                onclick="mobileMenuButtonClick(this.id)">
+                <img id="mobile-menu-open-icon" src="assets/icon/menu-open.svg" class="mobile-menu-open-icon">
+                <img id="mobile-menu-close-icon" src="assets/icon/menu-close.svg" class="mobile-menu-close-icon"
+                    hidden="">
+            </button>
+        </div>
+        <div class="header-parent-inactive" id="header-view">
+            <a href="index.html" class="inactive">Mis on ASI Karikas?</a>
+            <a href="miks-osaleda.html" class="inactive">Miks osaleda?</a>
+            <a href="koduvoor.html" class="active">Koduvoor</a>
+            <a href="loppvoor.html" class="inactive">Lõppvoor</a>
+            <a href="kontakt.html" class="inactive">Kontakt</a>
+            <a href="arhiiv.html" class="inactive">Arhiiv</a>
+            <a href="toetajad.html" class="inactive">Toetajad</a>
+        </div>
+    </header>
+    <main>
+        <div class="main-parent" id="main-view">
+            <div class="main-child">
+                <div class="welcome-screen">
+                    <div class="horizontal-content-div">
+                        <div>
+                            <img src="assets/logo/asikarikas_logo_white.svg" alt="asikarikas_logo_valge"
+                                class="asikarikas-logo_KD">
+                            <p class="asikarikas-logo-year">2026</p>
+                        </div>
+                        <div>
+                            <h1>Koduvoor</h1>
+                            <p>Koduvoor toimub Sul kodus. Lahendamisele kulub vaid kaks ülesannet. <b
+                                    class="underline">Esitada tuleb vähemalt üks ülesanne.</b></p>
+                            <p>Kui üks ülesannete koodidest ei tööta või on pooleli, siis esita see ka. Pea meeles:
+                                parem on esitada kogu tehtud töö kui mitte midagi.</p>
+                            <p><b style="color: #f0941d">TÄHTAEG</b> on <b class="underline">01.02.2026
+                                    23:59</b><br>Kõik esimeses voorus osalejad saavad osavõtudiplomi.</p>
+                            <p>Kui soovid osaleda, siis <a href="https://forms.gle/ZsKXaMdD6c1akfNz9"
+                                    style="color: #f0941d"><b>REGISTREERI END SIIN!</b></a></p>
+                        </div>
+                    </div>
+                    <button id="read-more-koduvoor"
+                        onclick="document.getElementById('rohkem-koduvoor').scrollIntoView({ behavior: 'smooth' });"
+                        class="loe-rohkem-button">
+                        <img src="assets/icon/read-more.svg" alt="nool" class="loe-rohkem-icon">
+                        <p class="loe-rohkem"><b>Loe Rohkem</b></p>
+                    </button>
+                </div>
+                <div class="horizontal-content-div">
+                    <div>
+                        <h1 id="rohkem-koduvoor">ASI KARIKA 2026 koduvooru ülesanded</h1>
+                        <p><i style="font-weight: 300;">NB! Kõigi ülesannete lahendamine ei ole kohustuslik. <a
+                                    href="assets/doc/ASI-KARIKA-2025-koduvooru-ülesanded.pdf">Uuri tervet ülesannet
+                                    siin!</a></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="code/js/asi.js"></script>
+</body>
+
+</html>

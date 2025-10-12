@@ -1,33 +1,4 @@
-var active_id = "b1"
-
-function buttonClick(id) {
-    // If the clicked tab is already active, just close the mobile nav (if open)
-    if (active_id == id) {
-        closeMobileNav();
-        return;
-    }
-    if (active_id != id) {
-        document.getElementById(active_id).className = "inactive";
-        document.getElementById(id).className = "active";
-
-        document.getElementById(active_id).firstChild.className = "inactive-icon";
-        document.getElementById(id).firstChild.className = "active-icon";
-
-        document.getElementById(active_id+"-view").hidden = true;
-        document.getElementById(id+"-view").hidden = false;
-
-        // ensure mobile menu icons and classes are reset and close the nav UI
-        document.getElementById("mobile-menu-open-icon").hidden = false;
-        document.getElementById("mobile-menu-close-icon").hidden = true;
-        document.getElementById("mobile-menu-button").className = "mobile-menu-button-inactive";
-        document.getElementById("header-view").classList.remove("nav-open");
-        document.getElementById("header-view").className = "header-parent-inactive";
-        document.getElementById("main-view").className = "main-parent";
-
-        active_id = id;
-    }
-}
-
+// Mobile menu functionality for multi-page navigation
 function mobileMenuButtonClick(id) {
     for (const element of document.getElementById(id).children) {
         element.hidden = !(element.hidden);
@@ -55,7 +26,7 @@ function mobileMenuButtonClick(id) {
     }
 }
 
-// Closes mobile nav (used when user taps the already-active tab)
+// Closes mobile nav (utility function)
 function closeMobileNav() {
     const btn = document.getElementById("mobile-menu-button");
     const header = document.getElementById("header-view");
