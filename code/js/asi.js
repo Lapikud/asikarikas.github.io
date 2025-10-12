@@ -22,14 +22,10 @@ function getNavigationHTML() {
     </header>`;
 }
 
-// Load navigation component and set active page (GitHub Pages compatible)
 function loadNavigation() {
     try {
-        // Insert navigation HTML
         const navigationHTML = getNavigationHTML();
         document.body.insertAdjacentHTML('afterbegin', navigationHTML);
-        
-        // Set active page based on current URL
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         const navLinks = document.querySelectorAll('header a[data-page]');
         
@@ -47,7 +43,6 @@ function loadNavigation() {
     }
 }
 
-// Initialize navigation when DOM is loaded
 document.addEventListener('DOMContentLoaded', loadNavigation);
 
 // Mobile menu functionality for multi-page navigation
