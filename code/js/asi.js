@@ -15,7 +15,7 @@ function getNavigationHTML() {
             <a href="miks-osaleda.html" data-page="miks-osaleda.html">Miks osaleda?</a>
             <a href="koduvoor.html" data-page="koduvoor.html">Koduvoor</a>
             <a href="loppvoor.html" data-page="loppvoor.html">Lõppvoor</a>
-            <a href="kontakt.html" data-page="kontakt.html">Kontakt</a>
+            <a href="reeglid.html" data-page="reeglid.html">Reeglid</a>
             <a href="arhiiv.html" data-page="arhiiv.html">Arhiiv</a>
             <a href="toetajad.html" data-page="toetajad.html">Toetajad</a>
         </div>
@@ -38,6 +38,10 @@ function loadNavigation() {
                 link.classList.remove('active');
             }
         });
+        // Ensure footer is present on the page (insert once)
+        if (!document.getElementById('site-footer')) {
+            document.body.insertAdjacentHTML('beforeend', getFooterHTML());
+        }
     } catch (error) {
         console.error('Error loading navigation:', error);
     }
@@ -90,4 +94,11 @@ function closeMobileNav() {
         main.classList.remove("main-parent-inactive");
         main.classList.add("main-parent");
     }
+}
+
+function getFooterHTML() {
+    return `<footer id="site-footer" class="footer">
+            <h1>Tekkisid küsimused?</h1>
+            <p>Kirjuta meile <a href="mailto:asikarikas@asikarikas.ee">asikarikas@asikarikas.ee</a> vastame esimesel võimalusel.</p>
+    </footer>`;
 }
