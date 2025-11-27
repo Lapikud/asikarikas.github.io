@@ -28,6 +28,20 @@ html {
     color: white;
 }
 
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 a {
     font-family: "Lato", serif;
     color: #f0941d;
@@ -208,6 +222,12 @@ a {
 
 .mobile-menu {
     display: none;
+}
+
+.footer{
+    flex: 0 0 auto;
+    padding: 2% 7% 7% 7%;
+    margin-top: auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -411,6 +431,12 @@ a {
 
     .toetajad {
         justify-content: center;
+    }
+
+    .footer{
+        flex: 0 0 auto;
+        padding: 18% 7% 7% 7%;
+        margin-top: auto;
     }
 }
 
