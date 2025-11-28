@@ -28,7 +28,7 @@ function loadNavigation() {
         document.body.insertAdjacentHTML('afterbegin', navigationHTML);
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         const navLinks = document.querySelectorAll('header a[data-page]');
-        
+
         navLinks.forEach(link => {
             if (link.getAttribute('data-page') === currentPage) {
                 link.classList.add('active');
@@ -97,8 +97,17 @@ function closeMobileNav() {
 }
 
 function getFooterHTML() {
-    return `<footer id="site-footer" class="footer">
-            <h1>Tekkisid küsimused?</h1>
-            <p>Kirjuta meile <a href="mailto:asikarikas@asikarikas.ee">asikarikas@asikarikas.ee</a> vastame esimesel võimalusel.</p>
-    </footer>`;
+    return `
+        <div style="text-align: center">
+            <footer id="site-footer" class="footer">
+                <h1 style="font-size: x-large">
+                    Tekkisid küsimused?
+                </h1>
+                <p style="font-size: small; text-align: center">
+                    Kirjuta meile <a href="mailto:asikarikas@asikarikas.ee">asikarikas@asikarikas.ee</a> 
+                    ja me vastame esimesel võimalusel.
+                </p>
+            </footer>
+        </div>
+    `;
 }
