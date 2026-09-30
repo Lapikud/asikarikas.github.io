@@ -103,8 +103,8 @@ function getFooterHTML() {
                 <h1 style="font-size: x-large">
                     Tekkisid küsimused?
                 </h1>
-                <p style="font-size: small; text-align: center">
-                    Kirjuta meile <a href="mailto:asikarikas@asikarikas.ee">asikarikas@asikarikas.ee</a> 
+                <p style="text-align: center">
+                    Kirjuta meile <a href="mailto:asikarikas@lapikud.ee">asikarikas@lapikud.ee</a> 
                     ja me vastame esimesel võimalusel.
                 </p>
             </footer>
