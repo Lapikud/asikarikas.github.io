@@ -102,7 +102,7 @@ a {
 }
 
 .register {
-    display: none;
+    display: block;
 }
 
 .register:hover{
