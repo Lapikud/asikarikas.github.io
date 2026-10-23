@@ -105,7 +105,7 @@ function getFooterHTML() {
                     Tekkisid küsimused?
                 </h1>
                 <p style="text-align: center">
-                    Kirjuta meile <a href="mailto:asikarikas@lapikud.ee">asikarikas@lapikud.ee</a> 
+                    Kirjuta meile <a href="mailto:asikarikas@asikarikas.ee">asikarikas@asikarikas.ee</a> 
                     ja me vastame esimesel võimalusel.
                 </p>
             </footer>
