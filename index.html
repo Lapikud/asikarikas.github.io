@@ -3,9 +3,11 @@
 
 <head>
     <title>ASI Karikas</title>
-    <link rel="icon" type="image/svg+xml" href="assets/logo/asikarikas_logo_white.svg">
-    <link rel="stylesheet" type="text/css" href="assets/fonts/fonts.css">
-    <link rel="stylesheet" type="text/css" href="code/css/asi.css">
+    <link rel="icon" type="image/svg+xml" href="assets/logo/asikarikas_favicon.svg">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="code/css/asi.css">
+    <link rel="stylesheet" href="code/css/home.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +27,7 @@
     "@type": "Event",
     "name": "ASI Karikas 2027",
     "description": "Võistkondlik programmeerimisvõistlus kooliõpilastele, mida korraldab TalTechi Arvutisüsteemide Instituut ja MTÜ Lapikud.",
-    "startDate": "2027-01-03",
+    "startDate": "2026-10-12",
     "endDate": "2027-03-13",
     "eventStatus": "https://schema.org/EventScheduled",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
@@ -49,55 +51,130 @@
 </head>
 
 
-<body>
+<body class="home-page">
     <!-- Navigation will be loaded dynamically -->
     <main>
         <div class="main-parent" id="main-view">
-
-            <div class="main-child">
-                <div class="welcome-screen">
-                    <img src="assets/logo/asikarikas_logo_white.svg" alt="asikarikas_logo_valge"
-                        class="asikarikas-logo">
-                    <p id="intro" class="elevator_pitch">ASI KARIKAS ON IT-VÄLJAKUTSEID PAKKUV VÕISTKONDLIK PROGRAMMEERIMISVÕISTLUS KOOLIÕPILASTELE</p>
-                    <button type="submit" class="active register" onclick="location.href='https://pilves.lapikud.ee/apps/forms/s/pETWDxgowe6K6Zjb5wmXfwz8'">REGISTREERIMA</button>
-                    <button type="button" id="read-more-1" onclick="document.getElementById('rohkem-welcome').scrollIntoView({ behavior: 'smooth' });"
-                        class="loe-rohkem-button">
-                        <img src="assets/icon/read-more.svg" alt="nool" class="loe-rohkem-icon">
-                        <b class="loe-rohkem">Loe Rohkem</b>
-                    </button>
-                </div>
-                <br>
-                <div class="misASI">
-                    <div class="horizontal-content-div" id="rohkem-welcome">
-                        <p>Võistlust korraldavad <a href="https://taltech.ee/arvutisusteemide-instituut">Tallinna
-                                Tehnikaülikooli Arvutisüsteemide Instituut</a> ning tudengite organisatsioon
-                            tarkvaraarenduse klubi <a href="https://www.lapikud.ee/">MTÜ Lapikud.</a></p>
-                        <img src="assets/logo/LAP_logo_v2_transp.png" alt="lapikud_logo" class="lapikud-logo">
+            <div class="home-content">
+                <section class="home-hero" aria-labelledby="intro">
+                    <img class="asikarikas-logo" src="assets/logo/asikarikas_logo_white.svg" alt="ASI Karikas">
+                    <h1 id="intro" class="elevator_pitch">ASI KARIKAS ON IT-VÄLJAKUTSEID PAKKUV VÕISTKONDLIK PROGRAMMEERIMISVÕISTLUS KOOLIÕPILASTELE</h1>
+                    <div class="home-actions">
+                        <a class="home-button home-button-primary" href="https://pilves.lapikud.ee/apps/forms/s/pETWDxgowe6K6Zjb5wmXfwz8">REGISTREERIMA</a>
+                        <button type="button" class="home-button home-button-secondary" onclick="document.getElementById('kuidas-osaleda').scrollIntoView({ behavior: 'smooth' });">Kuidas osaleda?</button>
                     </div>
-                    <h1>Võistlus jaguneb kolmeks vooruks:</h1>
-                    <br>
-                    <p><span class="bold-orange"><a href="https://asikarikas.ee/esimene-voor">I voor</a></span> on <b>individuaalne</b> ning <b>toimub kaugelt</b> ehk saad lahendada kodust lahkumata.
+                    <button type="button" class="home-more loe-rohkem-button" onclick="document.getElementById('rohkem-welcome').scrollIntoView({ behavior: 'smooth' });">
+                        <img src="assets/icon/read-more.svg" alt="" class="loe-rohkem-icon">
+                        <span class="loe-rohkem">Loe Rohkem</span>
+                    </button>
+                </section>
+                <div class="misASI">
+                    <section class="home-organizers" id="rohkem-welcome" aria-labelledby="organizers-title">
+                        <div class="home-organizers-copy">
+                            <h2 id="organizers-title">Korraldajad</h2>
+
+                            <p>Võistlust korraldavad <a href="https://taltech.ee/arvutisusteemide-instituut">TalTechi Arvutisüsteemide Instituut</a> ja tudengite tarkvaraarendusklubi <a href="https://www.lapikud.ee/">MTÜ Lapikud</a>.</p>
+                        </div>
+
+                        <a class="home-organizers-logo" href="https://www.lapikud.ee/"><img src="assets/logo/LAP_logo_v2_transp.png" alt="MTÜ Lapikud"></a>
+                    </section>
+                    <h2>Võistlus jaguneb kolmeks vooruks:</h2>
+                    <p><a class="bold-orange" href="esimene-voor.html">I voor</a> on <b>individuaalne</b> ning <b>toimub kaugelt</b> ehk saad lahendada kodust lahkumata.
                         I vooru väljakutse sisaldab kolme väikest ülesannet ühe TalTechi tudengi lõputöö raames valminud mikrokontrolleri simulaatori peal.
                         Esitada tuleb lahendused vähemalt kahele ülesandele kolmest ning lisaks üks endapoolne ülesande tekst ning vastav programmike.
                         Õigeks ajaks töötavad lahendused esitanud võistlejaid tunnustatakse <b>I vooru läbija meenega</b>.</p>
-                    <br>
-                    <p><span class="bold-orange"><a href="https://asikarikas.ee/teine-voor">II voor</a></span> on <b>võistkondlik</b> (tuleb registreerida 2–4-liikmeline võistkond) ning <b>toimub kaugelt</b> ehk saad lahendada kodust lahkumata.
+                    <p><a class="bold-orange" href="teine-voor.html">II voor</a> on <b>võistkondlik</b> (tuleb registreerida 2–4-liikmeline võistkond) ning <b>toimub kaugelt</b> ehk saad lahendada kodust lahkumata.
                         II vooru väljakutse sisaldab kahte ülesannet, mis võivad olla seotud veebi-, mobiili- ja/või mänguarendusega.
                         Esitada tuleb lahendus vähemalt ühele ülesandele kahest, kuid mõlema esitamine võib anda rohkem punkte.
                         Lisaks tuleb esitada 5-10 minuti pikkune video.
                         Õigeks ajaks lahenduse/d ja video esitanud võistkondade liikmeid tunnustatakse <b>osavõtudiplomi</b> ning <b>II vooru läbija meenega</b>.
                         Kaks parimat võistkonda valitakse lõppvooru.</p>
-                    <br>
-                    <p><span class="bold-orange"><a href="https://asikarikas.ee/loppvoor">Lõppvoor</a></span> on <b>võistkondlik</b> ning toimub <b>13. märtsil 2027 kohapeal Tallinna Tehnikaülikooli Mektory majas</b>.
+                    <p><a class="bold-orange" href="loppvoor.html">Lõppvoor</a> on <b>võistkondlik</b> ning toimub <b>13. märtsil 2027 kohapeal Tallinna Tehnikaülikooli Mektory majas</b>.
                         Lõppvooru valitakse kaks parimat 2–4-liikmelist võistkonda vastavalt II vooru ülesannete lahendustest saadud punktiskoorile.
                         Lõppvooru väljakutseks on üks ülesanne, mille lahendamiseks on aega neli tundi.
                         Ülesanne avalikustatakse finalistidele lõppvooru toimumispäeval.
                         Lõppvoorus osalejad pälvivad <b>TalTechi IT-teaduskonna Talendipileti</b> ning erinevaid <b>auhindu meie sponsoritelt</b> vastavalt 1. või 2. koha saavutamisele.
                         1. koha võitnud võistkond pälvib <b>"ASI Karikas 2027 võitja" tiitli</b>.</p>
-                    <br>
-                    <h1>Kuidas osaleda?</h1>
-                    <p>Loe iga vooru kohta täpsemalt: <a href="https://asikarikas.ee/esimene-voor">I voor</a>, <a href="https://asikarikas.ee/teine-voor">II voor</a>, <a href="https://asikarikas.ee/loppvoor">lõppvoor</a> ning tutvu üldiste reeglitega <a href="https://asikarikas.ee/reeglid">siin!</a></p>
                 </div>
+            <section class="home-section" aria-labelledby="why-title">
+                <h2 id="why-title">Miks osaleda?</h2>
+
+                <div class="home-card-grid">
+                    <article class="home-card">
+                        <h3>Lahenda uusi ülesandeid</h3>
+                        <p>Katseta oma teadmisi väljaspool tavapäraseid kooliülesandeid.</p>
+                    </article>
+
+                    <article class="home-card">
+                        <h3>Ehita koos sõpradega</h3>
+                        <p>Jaga ideid, katseta lahendusi ja arenda meeskonnatöö oskust.</p>
+                    </article>
+
+                    <article class="home-card">
+                        <h3>Võida kiirtee TalTechi</h3>
+                        <p>Finaali pääsenud tiimid saavad TalTechi IT-teaduskonna Talendipileti.</p>
+                    </article>
+                </div>
+
+                <a href="miks-osaleda.html">Vaata kõiki osalemise eeliseid →</a>
+            </section>
+
+            <section class="home-section" id="kuidas-osaleda" aria-labelledby="steps-title">
+                <h2 id="steps-title">Kuidas osaleda?</h2>
+
+                <ol class="participation-steps">
+                    <li>
+                        <h3>Registreeru ja alusta I voorust</h3>
+                        <p>Tutvu ülesannetega ning esita individuaalsed lahendused vastavalt <a href="esimene-voor.html">I vooru juhistele</a>.</p>
+                    </li>
+
+                    <li>
+                        <h3>Pane kokku võistkond</h3>
+                        <p>II voorus osalemiseks moodustage 2–4-liikmeline tiim. Vähemalt ühel liikmel peab olema I vooru salavõti.</p>
+                    </li>
+
+                    <li>
+                        <h3>Lahendage II vooru väljakutse</h3>
+                        <p>
+                            Esitage lahendus ja tutvustav video tähtajaks.
+                            Täpsemad nõuded leiate <a href="teine-voor.html">II vooru lehelt</a>.
+                        </p>
+                    </li>
+                </ol>
+
+                <p>Enne alustamist tutvu ka <a href="reeglid.html">võistlusreeglitega</a>.
+                </p>
+            </section>
+
+            <section class="home-section home-faq" aria-labelledby="faq-title">
+                <h2 id="faq-title">Korduma kippuvad küsimused</h2>
+
+                <details>
+                    <summary>Kas saan alustada üksi?</summary>
+                    <p>
+                        Jah. I voor on individuaalne.
+                        II voorus osalemiseks on vaja 2–4-liikmelist võistkonda.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Kas kõik tiimiliikmed peavad läbima I vooru?</summary>
+                    <p>II vooru lahenduse esitamiseks peab vähemalt ühel võistkonnaliikmel olema I vooru salavõti.</p>
+                </details>
+
+                <details>
+                    <summary>Kas tehisintellekti kasutamine on lubatud?</summary>
+                    <p>
+                        I ja II voorus on see lubatud, kui kasutus on dokumenteeritud vastavalt vooru juhistele.
+                        Loe täpsemalt <a href="reeglid.html">reeglitest</a>.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Kust saan abi?</summary>
+                    <p>Kirjuta <a href="mailto:asikarikas@asikarikas.ee">asikarikas@asikarikas.ee</a>.</p>
+                </details>
+            </section>
             </div>
         </div>
     </main>

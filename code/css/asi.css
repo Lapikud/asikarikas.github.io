@@ -1,26 +1,16 @@
+/* General css */
+
 .header-parent {
     position: sticky;
     top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    flex-direction: row;
 }
 
+.header-parent,
 .header-parent-inactive {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.header-child {
-    flex: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 html {
@@ -53,7 +43,7 @@ a {
 
 .bold-orange {
     font-weight: 900;
-    color: #f0941d
+    color: #f0941d;
 }
 
 .underline {
@@ -93,25 +83,6 @@ a {
     align-items: center;
 }
 
-.welcome-screen .register {
-    flex: 0 0 auto;
-    align-self: center;
-    min-width: 180px;
-    padding: 16px 34px;
-    border: 2px solid #007eff;
-}
-
-.register {
-    display: block;
-}
-
-.register:hover{
-    background-color: black;
-    color: #007eff;
-    border: 2px solid #007eff;
-    transition: background-color 0.3s, color 0.3s;
-}
-
 .horizontal-content-div {
     display: flex;
     align-items: center;
@@ -120,14 +91,8 @@ a {
     position: relative;
 }
 
-.vertical-content-div {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
 .asikarikas-logo {
-    max-width: 33%;
+    max-width: 55%;
 }
 
 .lapikud-logo {
@@ -146,26 +111,19 @@ a {
 .active {
     background-color: #007eff;
     color: black;
-    flex: auto;
-    border: 2px solid transparent;
-    margin: 0px 25px 0px 25px;
-    padding: 10px 0px 10px 0px;
-    border-radius: 5px;
-    font-size: 24px;
-    font-family: "Lato", serif;
-    font-weight: 900;
-    font-variant: normal;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.15s;
 }
 
 .inactive {
     background-color: black;
     color: #007eff;
+}
+
+.active,
+.inactive {
     flex: auto;
     border: 2px solid transparent;
-    margin: 0px 25px 0px 25px;
-    padding: 10px 0px 10px 0px;
+    margin: 0 25px;
+    padding: 10px 0;
     border-radius: 5px;
     font-size: 24px;
     font-family: "Lato", serif;
@@ -173,24 +131,6 @@ a {
     font-variant: normal;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.15s;
-}
-
-/* Hover states for navigation buttons - match the .register:hover behaviour */
-.active:hover,
-.inactive:hover {
-    background-color: black;
-    color: #007eff;
-    border-color: #007eff;
-}
-
-/* Focus styles for keyboard accessibility */
-.active:focus-visible,
-.inactive:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0,126,255,0.18);
-    background-color: black;
-    color: #007eff;
-    border-color: #007eff;
 }
 
 .elevator_pitch {
@@ -208,155 +148,116 @@ a {
     display: flex;
 }
 
-.main-parent-inactive {
-    display: flex;
-}
-
 .main-child {
     flex: 1;
-    padding: 2% 7% 7% 7%;
-}
-
-.active-icon {
-    display: none;
-}
-
-.inactive-icon {
-    display: none;
+    padding: 2% 7% 7%;
 }
 
 .mobile-menu {
     display: none;
 }
 
-.footer{
+.footer {
     flex: 0 0 auto;
     padding: 0% 7% 2% 7%;
     margin-top: auto;
+    text-align: center;
 }
 
+.footer p {
+    text-align: center;
+}
+
+.footer-title {
+  font-size: x-large;
+}
+
+/* Navigation link styles for multi-page setup */
+.header-parent-inactive a,
+.header-parent a {
+    background-color: black;
+    color: #007eff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-parent-inactive a.active,
+.header-parent a.active {
+    background-color: #007eff;
+    color: black;
+}
+
+/* Hover states for navigation links */
+.header-parent-inactive a:hover,
+.header-parent a:hover,
+.header-parent-inactive a.active:hover,
+.header-parent a.active:hover {
+    background-color: black;
+    color: #007eff;
+    border-color: #007eff;
+}
+
+/* Focus styles for keyboard accessibility */
+.header-parent-inactive a:focus-visible,
+.header-parent a:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,126,255,0.18);
+    background-color: black;
+    color: #007eff;
+    border-color: #007eff;
+}
+
+/* Mobile view */
 @media screen and (max-width: 600px) {
     .header-parent {
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: stretch;
-        justify-content: left;
-        overflow: hidden;
-        max-height: 0;
-        opacity: 0;
-        transition: max-height 360ms cubic-bezier(.2,.9,.2,1), opacity 280ms ease;
-    }
-
-    .header-parent.nav-open {
-        max-height: 120vh;
-        opacity: 1;
+        justify-content: flex-start;
     }
 
     .header-parent-inactive {
         display: none;
     }
 
-    .active {
-        border-radius: 5px;
-        display: flex;
-        justify-content: left;
-        padding-left: 10px;
-        margin: 0px 0px 0px 0px
-    }
-
-    .inactive {
-        border-radius: 5px;
-        color: #007eff;
-        display: flex;
-        justify-content: left;
-        padding-left: 10px;
-        margin: 0px 0px 0px 0px
-    }
-
-    /* Mobile navigation link styles */
+    .active,
+    .inactive,
     .header-parent a,
     .header-parent-inactive a {
-        border-radius: 5px;
-        display: flex;
-        justify-content: left;
-        padding-left: 10px;
-        margin: 0px 0px 0px 0px;
-        text-decoration: none;
-    }
-
-    .header-parent a.active,
-    .header-parent-inactive a.active {
-        border-radius: 5px;
-        display: flex;
-        justify-content: left;
-        padding-left: 10px;
-        margin: 0px 0px 0px 0px;
-        background-color: #007eff;
-        color: black;
-    }
-
-    .header-parent a.inactive,
-    .header-parent-inactive a.inactive {
-        border-radius: 5px;
-        color: #007eff;
-        display: flex;
-        justify-content: left;
-        padding-left: 10px;
-        margin: 0px 0px 0px 0px;
-        background-color: black;
-    }
-
-    .active-icon {
-        padding: 0px 20px 0px 20px;
-        display: inline;
-    }
-
-    .inactive-icon {
-        padding: 0px 20px 0px 20px;
-        filter: invert(100%);
-        rotate: 90deg;
-        display: inline;
+      display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    margin: 0;
     }
 
     .mobile-menu {
         display: flex;
         padding: 6vw;
         position: absolute;
-        right: 0em;
+        right: 0;
     }
+}
+
+.mobile-menu-button-inactive,
+.mobile-menu-button-active {
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
 }
 
 .mobile-menu-button-inactive {
     background-color: #007eff;
-    border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
 }
-
-
 
 .mobile-menu-button-active {
     background-color: black;
-    border: none;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
-    .header-parent.nav-open .mobile-menu-close-only {
-        display: block;
-        background: transparent;
-        color: #fff;
-        border: none;
-        font-size: 28px;
-        margin-left: auto;
-        margin-right: 16px;
-        cursor: pointer;
-    }
-}
 .main-parent-inactive {
     display: none;
 }
@@ -377,7 +278,7 @@ a {
 }
 
 /* TELEFON */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
 
     .asikarikas-logo {
         max-width: 94vw;
@@ -395,7 +296,6 @@ a {
     .misASI {
         display: flex;
         flex-direction: column;
-        justify-self: center;
     }
 
     h1 {
@@ -426,12 +326,10 @@ a {
     .supporter-img {
         width: 40vw;
         padding: 8vw;
-        justify-items: center;
     }
 
     .main-child {
-        flex: 1;
-        padding: 20% 7% 7% 7%;
+        padding: 20% 7% 7%;
     }
 
     .toetajad {
@@ -439,62 +337,28 @@ a {
     }
 
     .footer{
-        flex: 0 0 auto;
-        padding: 0% 7% 7% 7%;
-        margin-top: auto;
+        padding: 0% 7% 7%;
     }
 }
 
-/* Navigation link styles for multi-page setup */
-.header-parent-inactive a,
-.header-parent a {
-    background-color: black;
-    color: #007eff;
-    flex: auto;
-    border: 2px solid transparent;
-    margin: 0px 25px 0px 25px;
-    padding: 10px 0px 10px 0px;
-    border-radius: 5px;
-    font-size: 24px;
-    font-family: "Lato", serif;
-    font-weight: 900;
-    font-variant: normal;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.15s;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+/* Shared desktop navigation sizing on every page. */
+@media (min-width: 601px) {
+    .header-parent,
+    .header-parent-inactive {
+        justify-content: center;
+        gap: 8px;
+        max-width: 1240px;
+        margin-inline: auto;
+        padding: 12px 16px;
+    }
 
-.header-parent-inactive a.active,
-.header-parent a.active {
-    background-color: #007eff;
-    color: black;
-}
-
-/* Hover states for navigation links */
-.header-parent-inactive a:hover,
-.header-parent a:hover {
-    background-color: black;
-    color: #007eff;
-    border-color: #007eff;
-}
-
-.header-parent-inactive a.active:hover,
-.header-parent a.active:hover {
-    background-color: black;
-    color: #007eff;
-    border-color: #007eff;
-}
-
-/* Focus styles for keyboard accessibility */
-.header-parent-inactive a:focus-visible,
-.header-parent a:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0,126,255,0.18);
-    background-color: black;
-    color: #007eff;
-    border-color: #007eff;
+    .header-parent a,
+    .header-parent-inactive a {
+        flex: 0 1 auto;
+        margin: 0;
+        padding: 10px 14px;
+        font-size: 1.6rem;
+        font-weight: 700;
+        border-radius: 8px;
+    }
 }
