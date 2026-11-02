@@ -1,22 +1,13 @@
-/* Shared body text and emphasis. */
-:root {
-    --text-muted: #b8c1ce;
-    --text-strong: #fff;
-}
-
 @font-face {
-    font-family: "PixelifySans";
-    src: url('PixelifySans-Regular.ttf') format("truetype");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+    font-family: "Lato", serif;
+    src: url('PixelifySans-Regular.ttf');
+    font-weight: normal;
 }
 @font-face {
     font-family: "PixelifySans";
-    src: url('PixelifySans-Bold.ttf') format("truetype");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+    src: url('PixelifySans-Bold.ttf');
+    font-weight: bold;
+    font-stretch: normal;
 }
 
 .lato-regular {
@@ -42,12 +33,8 @@ h2 {
     margin: 50px 0px;
 }
 p, li {
-    color: var(--text-muted);
+    color: #fafafa;
     text-align: justify;
-}
-
-b, strong {
-    color: var(--text-strong);
 }
 
 
@@ -67,16 +54,14 @@ b, strong {
         margin: 50px 0px;
     }
     p, li {
+        color: #fafafa;
+        font-size: 24px;
         text-align: justify;
         line-height: 1.5;
         font-size: 1.9vw;
-        color: var(--text-muted);
     }
     li {
         padding: 6px 0px;
-    }
-    b, strong {
-    color: var(--text-strong);
     }
 }
 
@@ -96,15 +81,13 @@ b, strong {
         margin: 50px 0px;
     }
     p, li {
-        color: var(--text-muted);
+        color: #fafafa;
+        font-size: 24px;
         text-align: justify;
         line-height: 1.5;
         font-size: 1.9vw;
     }
     li {
         padding: 6px 0px;
-    }
-    b, strong {
-    color: var(--text-strong);
     }
 }
